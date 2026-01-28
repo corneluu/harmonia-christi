@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Security and Data
+# These files are hidden from the public repo but are needed for the build.
+src/data/songs.json
+src/data/access_hashes.json
+codes_for_choir.txt
+src/utils/logger.js
