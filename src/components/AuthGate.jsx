@@ -40,6 +40,12 @@ const AuthGate = ({ children }) => {
 
         const code = input.trim();
 
+        // Check for lowercase "hc" explicitly
+        if (code.includes('hc') || (/[a-z]/.test(code) && code.toLowerCase().startsWith('hc'))) {
+            setError('lowercase_warning');
+            return;
+        }
+
         // Special redirect logic
         // HC-4579 -> Sopran
         // HC-8463 -> Alto
@@ -60,7 +66,7 @@ const AuthGate = ({ children }) => {
             setIsAuthenticated(true);
             logAccess(code, userName); // Log the successful access with Name
         } else {
-            setError(true);
+            setError('invalid');
             // Shake effect or similar could go here
         }
     };
@@ -95,7 +101,11 @@ const AuthGate = ({ children }) => {
                         />
                     </div>
 
-                    {error && (
+                    {error === 'lowercase_warning' ? (
+                        <p className="text-red-500 text-sm font-medium">
+                            Trebuie să scrii HC cu litere mari.
+                        </p>
+                    ) : error && (
                         <p className="text-red-500 text-sm font-medium">
                             Cod incorect. Vă rugăm să încercați din nou.
                         </p>
