@@ -52,7 +52,7 @@ const SongList = () => {
             className={`
         relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-2
         ${filter === value
-                    ? 'bg-primary text-white shadow-md shadow-primary/20'
+                    ? 'bg-primary text-white dark:text-background shadow-md shadow-primary/20'
                     : 'bg-paper text-secondary hover:bg-background border border-border'}
       `}
         >
