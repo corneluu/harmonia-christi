@@ -3,11 +3,77 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-background: 248 250 252;
+    /* slate-50 */
+    --color-paper: 255 255 255;
+    /* white */
+    --color-primary: 30 41 59;
+    /* slate-800 */
+    --color-secondary: 51 65 85;
+    /* slate-700 */
+    --color-text: 15 23 42;
+    /* slate-900 */
+    --color-text-muted: 100 116 139;
+    /* slate-500 */
+    --color-border: 226 232 240;
+    /* slate-200 */
+  }
+
+  .dark {
+    --color-background: 15 23 42;
+    /* slate-900 */
+    --color-paper: 30 41 59;
+    /* slate-800 */
+    --color-primary: 248 250 252;
+    /* slate-50 (inverted) */
+    --color-secondary: 203 213 225;
+    /* slate-300 */
+    --color-text: 241 245 249;
+    /* slate-100 */
+    --color-text-muted: 148 163 184;
+    /* slate-400 */
+    --color-border: 51 65 85;
+    /* slate-700 */
+  }
+
   body {
-    @apply bg-gray-50 text-slate-900 font-sans antialiased;
+    @apply bg-background text-main font-sans antialiased transition-colors duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .marquee-wrap {
+    @apply overflow-hidden whitespace-nowrap;
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  }
+
+  .marquee-content {
+    @apply inline-block;
+  }
+
+  .group:hover .marquee-content {
+    animation: marquee 10s linear infinite;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+  /* For mobile/touch where hover isn't great, maybe just always scroll? 
+     Or user specifically asked "to move", implying constant movement?
+     Let's stick to hover for desktop to avoid chaos, but maybe constant for now if they want to "see longer texts".
+     Actually, let's make it always move slowly, or move on hover.
+     Let's try "move on hover" first.
+  */
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 }

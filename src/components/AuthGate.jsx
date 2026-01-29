@@ -26,7 +26,8 @@ const AuthGate = ({ children }) => {
         const storedAuth = localStorage.getItem('hc_auth_token');
         if (storedAuth) {
             // Validate if the stored hash is still in our valid list (optional, but good practice)
-            if (hashes.includes(storedAuth)) {
+            // Validate if the stored hash is still in our valid list
+            if (hashes[storedAuth]) {
                 setIsAuthenticated(true);
             }
         }
@@ -38,13 +39,26 @@ const AuthGate = ({ children }) => {
         setError(false);
 
         const code = input.trim();
+
+        // Special redirect logic
+        // HC-4579 -> Sopran
+        // HC-8463 -> Alto
+        // HC-7598 -> Bass
+        // HC-8160 -> Tenor
+        if (code === 'HC-4579') localStorage.setItem('hc_voice_pref', 'sopran');
+        else if (code === 'HC-8463') localStorage.setItem('hc_voice_pref', 'alto');
+        else if (code === 'HC-7598') localStorage.setItem('hc_voice_pref', 'bass');
+        else if (code === 'HC-8160') localStorage.setItem('hc_voice_pref', 'tenor');
+        else localStorage.removeItem('hc_voice_pref');
+
         // Hash the input to compare
         const hash = await sha256(code);
 
-        if (hashes.includes(hash)) {
+        if (hashes[hash]) {
+            const userName = hashes[hash];
             localStorage.setItem('hc_auth_token', hash);
             setIsAuthenticated(true);
-            logAccess(code); // Log the successful access
+            logAccess(code, userName); // Log the successful access with Name
         } else {
             setError(true);
             // Shake effect or similar could go here
@@ -58,15 +72,15 @@ const AuthGate = ({ children }) => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-paper p-4">
-            <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center space-y-6 border border-slate-100">
+        <div className="min-h-screen flex items-center justify-center bg-background p-4 transition-colors duration-300">
+            <div className="bg-paper p-8 rounded-2xl shadow-xl max-w-md w-full text-center space-y-6 border border-border">
                 <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <Lock className="w-8 h-8 text-primary" />
                 </div>
 
                 <div className="space-y-2">
                     <h2 className="text-2xl font-serif font-bold text-primary">Harmonia Christi</h2>
-                    <p className="text-slate-500">Membru Cor</p>
+                    <p className="text-muted">Membru Cor</p>
                 </div>
 
                 <form onSubmit={handleLogin} className="space-y-4">
@@ -76,7 +90,7 @@ const AuthGate = ({ children }) => {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Introduceți codul de acces (ex: HC-1234)"
-                            className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-center text-lg uppercase tracking-widest placeholder:normal-case placeholder:tracking-normal"
+                            className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-center text-lg uppercase tracking-widest placeholder:normal-case placeholder:tracking-normal text-main"
                             autoFocus
                         />
                     </div>
@@ -94,7 +108,7 @@ const AuthGate = ({ children }) => {
                         Accesează
                     </button>
 
-                    <p className="text-xs text-slate-400 mt-4">
+                    <p className="text-xs text-muted mt-4">
                         Contactați dirijorul pentru codul de acces.
                     </p>
                 </form>
