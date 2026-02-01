@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Search, FileText, Music, LayoutGrid } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -7,6 +7,7 @@ import songsData from '../data/songs.json';
 
 const SongList = () => {
     const { t } = useTranslation();
+    const [songs, setSongs] = useState(songsData);
     const [filter, setFilter] = useState(() => {
         // Check for stored preference from login
         const pref = localStorage.getItem('hc_voice_pref');
@@ -19,8 +20,17 @@ const SongList = () => {
     }); // all, sheets, audio
     const [searchQuery, setSearchQuery] = useState('');
 
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/corneluu/HC-Partituri-data/main/songs.json')
+            .then(res => res.json())
+            .then(data => {
+                setSongs(data);
+            })
+            .catch(err => console.error("Failed to fetch songs:", err));
+    }, []);
+
     const filteredSongs = useMemo(() => {
-        return songsData.filter(song => {
+        return songs.filter(song => {
             // Search logic
             const query = searchQuery.toLowerCase();
             const matchesSearch =
@@ -44,7 +54,7 @@ const SongList = () => {
 
             return true;
         });
-    }, [searchQuery, filter]);
+    }, [searchQuery, filter, songs]);
 
     const FilterButton = ({ value, icon: Icon, label }) => (
         <button

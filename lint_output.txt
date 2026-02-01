@@ -1,0 +1,244 @@
+
+D:\site-apps\HC-Partituri\google_drive_script.js
+  13:10  error  'generateSongJson' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  21:26  error  'DriveApp' is not defined                                                                no-undef
+  41:9   error  'Logger' is not defined                                                                  no-undef
+  42:9   error  'Logger' is not defined                                                                  no-undef
+  47:13  error  'Logger' is not defined                                                                  no-undef
+  50:9   error  'Logger' is not defined                                                                  no-undef
+  53:9   error  'Logger' is not defined                                                                  no-undef
+
+D:\site-apps\HC-Partituri\google_drive_updater.js
+  24:10  error  'checkForUpdates' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  35:5   error  'Logger' is not defined                                                                 no-undef
+  36:5   error  'Logger' is not defined                                                                 no-undef
+  37:5   error  'Logger' is not defined                                                                 no-undef
+  42:26  error  'DriveApp' is not defined                                                               no-undef
+  52:13  error  'Logger' is not defined                                                                 no-undef
+  56:9   error  'Logger' is not defined                                                                 no-undef
+  57:9   error  'Logger' is not defined                                                                 no-undef
+  58:9   error  'Logger' is not defined                                                                 no-undef
+  59:9   error  'Logger' is not defined                                                                 no-undef
+  62:9   error  'Logger' is not defined                                                                 no-undef
+
+D:\site-apps\HC-Partituri\src\components\AuthGate.jsx
+  31:17  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  29 |             // Validate if the stored hash is still in our valid list
+  30 |             if (hashes[storedAuth]) {
+> 31 |                 setIsAuthenticated(true);
+     |                 ^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |             }
+  33 |         }
+  34 |         setLoading(false);  react-hooks/set-state-in-effect
+
+D:\site-apps\HC-Partituri\src\components\Layout.jsx
+  4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\site-apps\HC-Partituri\src\components\SongList.jsx
+   4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  no-unused-vars
+  84:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  82 |                 {/* Filters */}
+  83 |                 <div className="flex flex-wrap justify-center gap-2">
+> 84 |                     <FilterButton value="sopran" label={t('filter_sopran')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  85 |                     <FilterButton value="alto" label={t('filter_alto')} />
+  86 |                     <FilterButton value="bass" label={t('filter_bass')} />
+  87 |                     <FilterButton value="tenor" label={t('filter_tenor')} />
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">                                                                               react-hooks/static-components
+  85:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  83 |                 <div className="flex flex-wrap justify-center gap-2">
+  84 |                     <FilterButton value="sopran" label={t('filter_sopran')} />
+> 85 |                     <FilterButton value="alto" label={t('filter_alto')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  86 |                     <FilterButton value="bass" label={t('filter_bass')} />
+  87 |                     <FilterButton value="tenor" label={t('filter_tenor')} />
+  88 |                     <FilterButton value="sheets" icon={FileText} label={t('filter_sheets')} />
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">                react-hooks/static-components
+  86:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  84 |                     <FilterButton value="sopran" label={t('filter_sopran')} />
+  85 |                     <FilterButton value="alto" label={t('filter_alto')} />
+> 86 |                     <FilterButton value="bass" label={t('filter_bass')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  87 |                     <FilterButton value="tenor" label={t('filter_tenor')} />
+  88 |                     <FilterButton value="sheets" icon={FileText} label={t('filter_sheets')} />
+  89 |                     <FilterButton value="all" label={t('filter_all')} />
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">             react-hooks/static-components
+  87:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  85 |                     <FilterButton value="alto" label={t('filter_alto')} />
+  86 |                     <FilterButton value="bass" label={t('filter_bass')} />
+> 87 |                     <FilterButton value="tenor" label={t('filter_tenor')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  88 |                     <FilterButton value="sheets" icon={FileText} label={t('filter_sheets')} />
+  89 |                     <FilterButton value="all" label={t('filter_all')} />
+  90 |                     <FilterButton value="audio" icon={Music} label={t('filter_audio')} />
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">  react-hooks/static-components
+  88:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  86 |                     <FilterButton value="bass" label={t('filter_bass')} />
+  87 |                     <FilterButton value="tenor" label={t('filter_tenor')} />
+> 88 |                     <FilterButton value="sheets" icon={FileText} label={t('filter_sheets')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  89 |                     <FilterButton value="all" label={t('filter_all')} />
+  90 |                     <FilterButton value="audio" icon={Music} label={t('filter_audio')} />
+  91 |                 </div>
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">                                                      react-hooks/static-components
+  89:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  87 |                     <FilterButton value="tenor" label={t('filter_tenor')} />
+  88 |                     <FilterButton value="sheets" icon={FileText} label={t('filter_sheets')} />
+> 89 |                     <FilterButton value="all" label={t('filter_all')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  90 |                     <FilterButton value="audio" icon={Music} label={t('filter_audio')} />
+  91 |                 </div>
+  92 |             </div>
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">                                                                                                              react-hooks/static-components
+  90:22  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  88 |                     <FilterButton value="sheets" icon={FileText} label={t('filter_sheets')} />
+  89 |                     <FilterButton value="all" label={t('filter_all')} />
+> 90 |                     <FilterButton value="audio" icon={Music} label={t('filter_audio')} />
+     |                      ^^^^^^^^^^^^ This component is created during render
+  91 |                 </div>
+  92 |             </div>
+  93 |
+
+  47 |     }, [searchQuery, filter]);
+  48 |
+> 49 |     const FilterButton = ({ value, icon: Icon, label }) => (
+     |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 50 |         <button
+     | ^^^^^^^^^^^^^^^
+> 51 |             onClick={() => setFilter(value)}
+     ΓÇª
+     | ^^^^^^^^^^^^^^^
+> 61 |         </button>
+     | ^^^^^^^^^^^^^^^
+> 62 |     );
+     | ^^^^^^ The component is created during render here
+  63 |
+  64 |     return (
+  65 |         <div className="space-y-8">                                                                                                                                                                                           react-hooks/static-components
+
+Γ£û 28 problems (28 errors, 0 warnings)
+
