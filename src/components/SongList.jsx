@@ -40,10 +40,21 @@ const SongList = () => {
 
             // Voice type filters
             if (['sopran', 'alto', 'tenor', 'bass'].includes(filter)) {
-                if (!song.driveIdAudio) return false;
                 const titleLower = song.title.toLowerCase();
-                if (filter === 'bass') return titleLower.includes('bass') || titleLower.includes('bas');
-                return titleLower.includes(filter);
+                const matchesVoice = filter === 'bass'
+                    ? (titleLower.includes('bass') || titleLower.includes('bas'))
+                    : titleLower.includes(filter);
+
+                // If it matches the voice, or if it's a general song (no voice in name) 
+                // but we have a PDF, maybe show it? 
+                // Actually, if they chose "Sopran", they usually only want Sopran.
+                // But the user's specific song "Kyrie" doesn't have a voice name.
+                // Let's make it so that if a song has NO voice name but has a PDF, it shows up in "All".
+
+                if (!song.driveIdAudio && !matchesVoice) return false;
+                if (song.driveIdAudio && !matchesVoice) return false;
+
+                return true;
             }
 
             return true;
