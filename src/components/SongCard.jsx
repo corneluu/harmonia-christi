@@ -20,7 +20,7 @@ const MarqueeWrapper = ({ children, text, className, threshold = 20 }) => {
     );
 };
 
-const SongCard = ({ song }) => {
+const SongCard = ({ song, index }) => {
     const { t } = useTranslation();
 
     return (
@@ -34,6 +34,7 @@ const SongCard = ({ song }) => {
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                     <MarqueeWrapper text={song.title} className="text-lg font-serif font-semibold text-main" threshold={20}>
+                        <span className="text-primary/60 mr-2 font-sans tabular-nums">{index}.</span>
                         {song.title}
                     </MarqueeWrapper>
 

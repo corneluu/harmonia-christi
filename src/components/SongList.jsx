@@ -7,7 +7,31 @@ import songsData from '../data/songs.json';
 
 const SongList = () => {
     const { t } = useTranslation();
-    const [songs, setSongs] = useState(songsData);
+
+    // Manual entries to ensure they are ALWAYS visible regardless of JSON sync
+    const manualSongs = [
+        {
+            "id": "manual-kyrie-1",
+            "title": "Kyrie",
+            "composer": "Doamne Isuse",
+            "category": "General",
+            "driveIdPdf": "1usI-W38i55ceCIhZ30YUrhy_Me5o5mYY",
+            "driveIdAudio": ""
+        }
+    ];
+
+    const [songs, setSongs] = useState(() => {
+        // Merge bundled data with manual entries, avoiding duplicates by ID
+        const combined = [...manualSongs];
+        const manualIds = new Set(manualSongs.map(s => s.id));
+
+        songsData.forEach(song => {
+            if (!manualIds.has(song.id)) {
+                combined.push(song);
+            }
+        });
+        return combined;
+    });
     console.log('Total songs loaded in browser:', songs.length);
     console.log('Current filter:', filter);
     const [filter, setFilter] = useState(() => {
@@ -118,7 +142,7 @@ const SongList = () => {
                 layout
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-                {filteredSongs.map((song) => (
+                {filteredSongs.map((song, index) => (
                     <motion.div
                         layout
                         key={song.id}
@@ -127,7 +151,7 @@ const SongList = () => {
                         exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <SongCard song={song} />
+                        <SongCard song={song} index={index + 1} />
                     </motion.div>
                 ))}
 
