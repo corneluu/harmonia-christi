@@ -20,15 +20,8 @@ const SongList = () => {
     }); // all, sheets, audio
     const [searchQuery, setSearchQuery] = useState('');
 
-    useEffect(() => {
-        const cacheBuster = new Date().getTime();
-        fetch(`https://raw.githubusercontent.com/corneluu/HC-Partituri-data/main/songs.json?t=${cacheBuster}`)
-            .then(res => res.json())
-            .then(data => {
-                setSongs(data);
-            })
-            .catch(err => console.error("Failed to fetch songs:", err));
-    }, []);
+    // Data is now bundled during deployment for reliability and privacy.
+    // The previous dynamic fetch was causing sync issues and 404 errors.
 
     const filteredSongs = useMemo(() => {
         return songs.filter(song => {
