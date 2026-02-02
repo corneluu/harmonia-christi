@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# Security and Data
-codes_for_choir.txt
-src/utils/logger.js
