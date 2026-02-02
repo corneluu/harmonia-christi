@@ -8,30 +8,7 @@ import songsData from '../data/songs.json';
 const SongList = () => {
     const { t } = useTranslation();
 
-    // Manual entries to ensure they are ALWAYS visible regardless of JSON sync
-    const manualSongs = [
-        {
-            "id": "1",
-            "title": "Kyrie",
-            "composer": "Doamne Isuse",
-            "category": "General",
-            "driveIdPdf": "1usI-W38i55ceCIhZ30YUrhy_Me5o5mYY",
-            "driveIdAudio": ""
-        }
-    ];
-
-    const [songs, setSongs] = useState(() => {
-        // Merge bundled data with manual entries, avoiding duplicates by ID
-        const combined = [...manualSongs];
-        const manualIds = new Set(manualSongs.map(s => s.id));
-
-        songsData.forEach(song => {
-            if (!manualIds.has(song.id)) {
-                combined.push(song);
-            }
-        });
-        return combined;
-    });
+    const [songs, setSongs] = useState(songsData);
     const [filter, setFilter] = useState(() => {
         // Check for stored preference from login
         const pref = localStorage.getItem('hc_voice_pref');
