@@ -8,6 +8,8 @@ import songsData from '../data/songs.json';
 const SongList = () => {
     const { t } = useTranslation();
     const [songs, setSongs] = useState(songsData);
+    console.log('Total songs loaded in browser:', songs.length);
+    console.log('Current filter:', filter);
     const [filter, setFilter] = useState(() => {
         // Check for stored preference from login
         const pref = localStorage.getItem('hc_voice_pref');
