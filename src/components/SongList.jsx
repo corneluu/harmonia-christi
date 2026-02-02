@@ -11,7 +11,7 @@ const SongList = () => {
     // Manual entries to ensure they are ALWAYS visible regardless of JSON sync
     const manualSongs = [
         {
-            "id": "manual-kyrie-1",
+            "id": "1",
             "title": "Kyrie",
             "composer": "Doamne Isuse",
             "category": "General",
@@ -142,7 +142,7 @@ const SongList = () => {
                 layout
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-                {filteredSongs.map((song, index) => (
+                {filteredSongs.map((song) => (
                     <motion.div
                         layout
                         key={song.id}
@@ -151,7 +151,7 @@ const SongList = () => {
                         exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <SongCard song={song} index={index + 1} />
+                        <SongCard song={song} />
                     </motion.div>
                 ))}
 
