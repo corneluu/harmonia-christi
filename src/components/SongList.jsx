@@ -32,18 +32,15 @@ const SongList = () => {
         });
         return combined;
     });
-    console.log('Total songs loaded in browser:', songs.length);
-    console.log('Current filter:', filter);
     const [filter, setFilter] = useState(() => {
         // Check for stored preference from login
         const pref = localStorage.getItem('hc_voice_pref');
-        // Clear it so it doesn't persist forever if they want to change it?
-        // Actually, user said "from then he can freelly chose".
-        // It's probably better to keep it as default for the session or just read it once.
-        // Let's just read it. If they change it, setFilter updates the state.
-        // If they refresh, SongList remounts, reads it again. That seems correct for "redirect to...".
         return pref || 'all';
     }); // all, sheets, audio
+
+    console.log('Total songs loaded in browser:', songs.length);
+    console.log('Current filter:', filter);
+
     const [searchQuery, setSearchQuery] = useState('');
 
     // Data is now bundled during deployment for reliability and privacy.
@@ -133,8 +130,11 @@ const SongList = () => {
             </div>
 
             {/* Results Info */}
-            <div className="flex justify-between items-center text-sm text-muted pt-4 border-t border-border/50">
-                <p>{t('items_count', { count: filteredSongs.length })}</p>
+            <div className="flex flex-col gap-1 text-sm text-muted pt-4 border-t border-border/50">
+                <div className="flex justify-between items-center">
+                    <p>{t('items_count', { count: filteredSongs.length })}</p>
+                    <p className="text-[10px] opacity-30">Debug: Total={songs.length} | Match={filteredSongs.length} | Filter={filter}</p>
+                </div>
             </div>
 
             {/* Grid */}
