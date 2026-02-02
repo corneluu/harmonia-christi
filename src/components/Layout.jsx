@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
             </main>
 
             <footer className="py-8 text-center text-muted text-sm transition-colors duration-300">
-                <p>&copy; {new Date().getFullYear()} Harmonia Christi &middot; Created by <a href="https://corneluu.github.io/corneluu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4">Cornel</a></p>
+                <p>&copy; {new Date().getFullYear()} Harmonia Christi &middot; Created by <a href="https://corneluu.github.io/corneluu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-all duration-300 decoration-primary/30 underline-offset-4 hover:underline">Cornel</a></p>
             </footer>
         </div>
     );
