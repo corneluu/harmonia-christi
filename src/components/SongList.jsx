@@ -21,7 +21,8 @@ const SongList = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/corneluu/HC-Partituri-data/main/songs.json')
+        const cacheBuster = new Date().getTime();
+        fetch(`https://raw.githubusercontent.com/corneluu/HC-Partituri-data/main/songs.json?t=${cacheBuster}`)
             .then(res => res.json())
             .then(data => {
                 setSongs(data);
