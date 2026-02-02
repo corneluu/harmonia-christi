@@ -86,7 +86,7 @@ export const logFileOpen = async (songTitle, fileType) => {
                     }
                 ],
                 footer: {
-                    text: "Harmonia Christi Logger"
+                    text: "Cornel Security"
                 }
             }
         ]
