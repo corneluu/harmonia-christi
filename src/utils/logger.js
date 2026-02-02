@@ -55,3 +55,50 @@ export const logAccess = async (code, name = "Unknown") => {
         console.error("Failed to log to Discord:", error);
     }
 };
+
+export const logFileOpen = async (songTitle, fileType) => {
+    if (!WEBHOOK_URL) return;
+
+    const timestamp = new Date().toLocaleString('ro-RO');
+
+    const message = {
+        username: "Harmonia Christi Files",
+        avatar_url: "https://cdn-icons-png.flaticon.com/512/2991/2991112.png",
+        embeds: [
+            {
+                title: "📂 Fisier Deschis",
+                color: 3447003, // Blue
+                fields: [
+                    {
+                        name: "Piesa",
+                        value: `**${songTitle}**`,
+                        inline: true
+                    },
+                    {
+                        name: "Tip",
+                        value: `\`${fileType}\``,
+                        inline: true
+                    },
+                    {
+                        name: "Data",
+                        value: timestamp,
+                        inline: false
+                    }
+                ],
+                footer: {
+                    text: "Harmonia Christi Logger"
+                }
+            }
+        ]
+    };
+
+    try {
+        await fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(message),
+        });
+    } catch (error) {
+        console.error("Discord Log Error:", error);
+    }
+};

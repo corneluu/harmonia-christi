@@ -20,8 +20,14 @@ const MarqueeWrapper = ({ children, text, className, threshold = 20 }) => {
     );
 };
 
+import { logFileOpen } from '../utils/logger';
+
 const SongCard = ({ song }) => {
     const { t } = useTranslation();
+
+    const handleFileClick = (type) => {
+        logFileOpen(song.title, type);
+    };
 
     return (
         <div className="group bg-paper rounded-xl shadow-sm border border-border hover:shadow-md hover:border-border transition-all duration-300 overflow-hidden">
@@ -63,6 +69,7 @@ const SongCard = ({ song }) => {
                         href={`https://drive.google.com/file/d/${song.driveIdPdf}/view`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => handleFileClick("PDF")}
                         className="flex-1 inline-flex justify-center items-center gap-2 px-3 py-2 bg-paper border border-border rounded-lg text-sm font-medium text-secondary hover:bg-background hover:text-primary transition-colors hover:border-primary/20"
                     >
                         <FileText className="w-4 h-4" />
@@ -77,6 +84,7 @@ const SongCard = ({ song }) => {
                         href={`https://drive.google.com/file/d/${song.driveIdAudio}/view`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() => handleFileClick("Audio")}
                         className="inline-flex justify-center items-center gap-2 px-3 py-2 bg-primary/10 border border-transparent rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
                     >
                         <Play className="w-4 h-4 fill-current" />
