@@ -110,7 +110,6 @@ const SongList = () => {
             <div className="flex flex-col gap-1 text-sm text-muted pt-4 border-t border-border/50">
                 <div className="flex justify-between items-center">
                     <p>{t('items_count', { count: filteredSongs.length })}</p>
-                    <p className="text-[10px] opacity-30">Debug: Total={songs.length} | Match={filteredSongs.length} | Filter={filter}</p>
                 </div>
             </div>
 
