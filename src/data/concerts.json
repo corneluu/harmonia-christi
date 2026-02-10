@@ -159,8 +159,10 @@
         "songId": "69",
         "notes": "Solo Iustin, Ovidiu, Mălina, Katy",
         "parts": {
+            "Sopran": "15",
             "Alto": "70",
-            "Tenor": "71"
+            "Tenor": "71",
+            "Bass": "14"
         }
     },
     {
