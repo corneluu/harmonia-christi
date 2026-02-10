@@ -22,7 +22,7 @@ const MarqueeWrapper = ({ children, text, className, threshold = 20 }) => {
 
 import { logFileOpen } from '../utils/logger';
 
-const SongCard = ({ song }) => {
+const SongCard = ({ song, index }) => {
     const { t } = useTranslation();
 
     const handleFileClick = (type) => {
@@ -30,11 +30,11 @@ const SongCard = ({ song }) => {
     };
 
     return (
-        <div className="group bg-paper rounded-xl shadow-sm border border-border hover:shadow-md hover:border-border transition-all duration-300 overflow-hidden">
-            <div className="p-5 flex items-start gap-4">
-                {/* Icon Container */}
-                <div className="bg-background p-3 rounded-lg group-hover:bg-primary/5 transition-colors">
-                    <Music2 className="w-6 h-6 text-muted group-hover:text-primary transition-colors" />
+        <div className="group bg-paper rounded-xl shadow-sm border border-border hover:shadow-md hover:border-primary/20 transition-all duration-300 overflow-hidden flex flex-col h-full">
+            <div className="p-5 flex items-start gap-4 flex-1">
+                {/* Index or Icon */}
+                <div className={`p-3 rounded-lg flex items-center justify-center w-12 h-12 flex-shrink-0 transition-colors ${index ? 'bg-primary/5 text-primary font-bold text-lg' : 'bg-background group-hover:bg-primary/5'}`}>
+                    {index ? index : <Music2 className="w-6 h-6 text-muted group-hover:text-primary transition-colors" />}
                 </div>
 
                 {/* Content */}
