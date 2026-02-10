@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from './components/Layout';
 import SongList from './components/SongList';
 import ConcertProgram from './components/ConcertProgram';
+import logo from './assets/logo.png';
 
 function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -30,7 +31,7 @@ function App() {
           <section className="text-center py-12 sm:py-20">
             <div className="flex justify-center mb-8">
               <img
-                src="/logo.png"
+                src={logo}
                 alt="Harmonia Christi"
                 className="h-24 sm:h-32 w-auto drop-shadow-xl animate-fade-in"
               />

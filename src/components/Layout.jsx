@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Music, Languages, Menu, Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo from '../assets/logo.png';
 
 const Layout = ({ children }) => {
     const { t, i18n } = useTranslation();
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
                         <div className="flex items-center gap-3">
                             <div className="flex-shrink-0">
                                 <img
-                                    src="/logo.png"
+                                    src={logo}
                                     alt="Harmonia Christi Logo"
                                     className="h-10 w-auto rounded-md shadow-sm"
                                 />
