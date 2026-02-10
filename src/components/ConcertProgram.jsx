@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Play, Music2 } from 'lucide-react';
+import { FileText, Play, Music2, ArrowLeft, Music } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import songsData from '../data/songs.json';
 import concertsData from '../data/concerts.json';
@@ -122,30 +122,34 @@ const ProgramItem = ({ item, index, originalSong, songsMap }) => {
     );
 };
 
-const ConcertProgram = () => {
+const ConcertProgram = ({ programId = 'concert' }) => {
+    const { t } = useTranslation();
     // Create a map for quick song lookup
     const songsMap = new Map(songsData.map(song => [song.id, song]));
+
+    // Get the specific program data from the new object structure
+    const programData = concertsData[programId] || concertsData['concert'];
+    const programItems = programData.items || [];
 
     return (
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="text-center mb-12">
-                <span className="inline-block px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-bold tracking-wider uppercase mb-3">
-                    Concert
-                </span>
                 <h1 className="text-4xl sm:text-5xl font-serif font-bold text-primary mb-4">
-                    Program
+                    {programData.title}
                 </h1>
-                <p className="text-xl text-muted font-serif italic">
-                    10 Februarie 2026
-                </p>
+                {programData.description && (
+                    <p className="text-lg text-muted font-serif italic">
+                        {programData.description}
+                    </p>
+                )}
             </div>
 
             <div className="bg-paper rounded-2xl shadow-sm border border-border p-2 overflow-hidden">
-                {concertsData.map((item, index) => {
+                {programItems.map((item, index) => {
                     const originalSong = item.songId ? songsMap.get(item.songId) : null;
                     return (
                         <ProgramItem
-                            key={index}
+                            key={item.id || index}
                             item={item}
                             index={index + 1}
                             originalSong={originalSong}
@@ -155,8 +159,7 @@ const ConcertProgram = () => {
                 })}
             </div>
 
-            <div className="text-center mt-12 text-muted text-sm">
-                <p>Harmonia Christi Choir</p>
+            <div className="mt-12">
             </div>
         </div>
     );
