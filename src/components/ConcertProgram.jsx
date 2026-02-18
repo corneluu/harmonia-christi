@@ -72,7 +72,7 @@ const ProgramItem = ({ item, index, originalSong, songsMap }) => {
             {/* Actions - Scrollable on mobile (swipe) */}
             <div className="flex-shrink-0 flex items-center gap-3 sm:ml-auto pl-[3.5rem] sm:pl-0 w-full sm:w-auto mt-1 sm:mt-0 overflow-x-auto no-scrollbar pb-1 sm:pb-0 scroll-smooth">
                 {/* PDF Buttons - Handle Multi-page or Single */}
-                {item.pages ? (
+                {item.pages && item.pages.length > 0 ? (
                     item.pages.map((page, idx) => {
                         const pageSong = songsMap.get(page.id);
                         if (!pageSong || !pageSong.driveIdPdf) return null;
@@ -91,7 +91,7 @@ const ProgramItem = ({ item, index, originalSong, songsMap }) => {
                             </a>
                         );
                     })
-                ) : hasPdf && (
+                ) : hasPdf ? (
                     <a
                         href={`https://drive.google.com/file/d/${originalSong.driveIdPdf}/view`}
                         target="_blank"
@@ -103,6 +103,13 @@ const ProgramItem = ({ item, index, originalSong, songsMap }) => {
                         <FileText className="w-4 h-4" />
                         <span className="text-sm font-medium">Partitură</span>
                     </a>
+                ) : (
+                    // Show "No Score" badge if no PDF and no pages
+                    // Only show if it matches the user request: "put a sign that there is no partiture"
+                    <div className="flex-1 sm:flex-none justify-center sm:justify-start flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 text-muted rounded-full cursor-not-allowed border border-border">
+                        <FileText className="w-4 h-4 opacity-50" />
+                        <span className="text-sm font-medium opacity-75">Fără Partitură</span>
+                    </div>
                 )}
                 {hasAudio && (
                     <a

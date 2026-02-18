@@ -80,7 +80,16 @@ function run() {
                     updatedCount++;
                 }
             } else {
-                console.warn(`Could not find song for "${item.title}"`);
+                console.warn(`Could not find song for "${item.title}" - Removing Link`);
+                // CRITICAL: Clear the ID if not found, to avoid linking to wrong (old) IDs
+                if (item.songId !== null) {
+                    item.songId = null;
+                    updatedCount++;
+                }
+                // Also clear pages if no song found
+                if (item.pages && item.pages.length > 0) {
+                    item.pages = [];
+                }
             }
 
             // Update Parts
