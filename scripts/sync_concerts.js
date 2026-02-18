@@ -24,10 +24,20 @@ function cleanTitle(title) {
     return cleaned.trim();
 }
 
+const DEBUG_FILE = path.join(__dirname, 'sync_debug.log');
+fs.writeFileSync(DEBUG_FILE, ''); // Clear file
+
+function logDebug(msg) {
+    fs.appendFileSync(DEBUG_FILE, msg + '\n');
+    console.log(msg);
+}
+
 function run() {
-    console.log('Reading files...');
+    logDebug('Reading files...');
     const songs = JSON.parse(fs.readFileSync(SONGS_PATH, 'utf8'));
     const concerts = JSON.parse(fs.readFileSync(CONCERTS_PATH, 'utf8'));
+    // ...
+
 
     // Build lookup maps
     // 1. Exact Title Map
@@ -38,6 +48,10 @@ function run() {
     songs.forEach(song => {
         titleMap.set(song.title, song.id);
         cleanedMap.set(song.title.toLowerCase(), song.id);
+        if (song.title.includes("Elijah")) {
+            const codes = song.title.split('').map(c => c.charCodeAt(0)).join(',');
+            logDebug(`Loaded song: "${song.title}" Codes: ${codes} ID: ${song.id}`);
+        }
     });
 
     console.log(`Loaded ${songs.length} songs.`);
@@ -64,6 +78,17 @@ function run() {
         return null;
     }
 
+
+    // Manual mapping for title variations or English -> Romanian
+    const titleMapping = {
+        "The Days of Elijah": "The days of Elijah",
+        "Heaven Is in My Heart": "Cerul e in inima mea",
+        "E piu bello Insieme": "Împreună i mai frumos",
+        "Doamne intr-o zi m-ai chemat": "Doamne, intr o zi m ai chemat",
+        "Spera in Domnul": "Spera in domnul",
+        "Verso l’alto (doar cu orga)": "Verso l'alto"
+    };
+
     const sections = Object.keys(concerts);
     let updatedCount = 0;
 
@@ -71,8 +96,18 @@ function run() {
         if (!concerts[section].items) continue;
 
         for (const item of concerts[section].items) {
+
+            // Clean title and check mapping
+            let cleanItemTitle = cleanTitle(item.title);
+            if (titleMapping[cleanItemTitle]) {
+                console.log(`Mapping "${cleanItemTitle}" -> "${titleMapping[cleanItemTitle]}"`);
+                cleanItemTitle = titleMapping[cleanItemTitle];
+            }
+
             // Update Main Song ID
-            const newSongId = findSongId(item.title);
+            // Try finding by mapped title first, then original
+            let newSongId = findSongId(cleanItemTitle) || findSongId(item.title);
+
             if (newSongId) {
                 if (item.songId !== newSongId) {
                     console.log(`Updating "${item.title}": ${item.songId} -> ${newSongId}`);
@@ -80,7 +115,7 @@ function run() {
                     updatedCount++;
                 }
             } else {
-                console.warn(`Could not find song for "${item.title}" - Removing Link`);
+                console.warn(`Could not find song for "${item.title}" (mapped: "${cleanItemTitle}") - Removing Link`);
                 // CRITICAL: Clear the ID if not found, to avoid linking to wrong (old) IDs
                 if (item.songId !== null) {
                     item.songId = null;
@@ -99,46 +134,77 @@ function run() {
                 // But let's fix parts first.
 
                 for (const partType of Object.keys(item.parts)) {
-                    const baseTitle = cleanTitle(item.title);
+                    // Try matches with mapped title AND original/aliased titles
+                    const baseTitles = [cleanItemTitle];
+
+                    // Specific aliases for cross-language parts
+                    if (cleanItemTitle === "Heaven Is in My Heart") baseTitles.push("Cerul e in inima mea");
+                    if (cleanItemTitle === "Cerul e in inima mea") baseTitles.push("Heaven Is in My Heart");
+                    if (cleanItemTitle === "Doamne intr-o zi m-ai chemat") baseTitles.push("Doamne, intr o zi m ai chemat");
+                    if (cleanItemTitle.includes("Te caut")) baseTitles.push("Te caut o Doamne");
+                    if (cleanItemTitle.includes("Emmanuel")) baseTitles.push("Emmanuel"); // Ensure clean title is used for strict matching
+                    if (cleanItemTitle.includes("In veci voi canta")) baseTitles.push("In veci voi canta");
+                    if (cleanItemTitle.includes("Kyrie Bunoza")) baseTitles.push("Kyrie Bunoza");
+                    if (cleanItemTitle.includes("Verso")) {
+                        baseTitles.push("Verso l'alto");
+                        baseTitles.push("Verso l’alto");
+                    }
+                    if (cleanItemTitle.includes("Marching")) baseTitles.push("Marching song");
+
+                    // Debug specific songs
+                    const isDebug = cleanItemTitle.includes("Marching") || cleanItemTitle.includes("Verso");
 
                     // Specific fix for "Bass" vs "Bas"
                     let searchPart = partType;
                     if (partType === 'Bass') searchPart = 'Bas';
 
-                    // STRICT variations only. 
-                    // We expect "Title | Part" or "Title (Part)" or "Title - Part".
-                    // We DO NOT match just "Title" (main song).
-
-                    const variations = [
-                        `${baseTitle} | ${partType}`,
-                        `${baseTitle} | ${searchPart}`,
-                        `${baseTitle} | ${partType.toLowerCase()}`,
-                        `${baseTitle} | ${searchPart.toLowerCase()}`,
-                        `${baseTitle} - ${partType}`,
-                        `${baseTitle} (${partType})`,
-                        // Handle "Title Part" e.g. "Song Bas" if that is a pattern, but be careful.
-                        // songs.json usually has "|".
-                    ];
-
                     let foundPartId = null;
-                    for (const v of variations) {
-                        // We need a way to find EXACT or very close match, checking our titleMap/cleanedMap.
-                        // Our findSongId does exact or cleaned match.
-                        // But we want to ensure we don't accidentally match the main song if the main song IS "Title".
-                        // The variations above include the part name, so they shouldn't match "Title" unless "Title" literally contains the part name.
-                        foundPartId = findSongId(v);
-                        if (foundPartId) break;
+
+                    // Loop through all base title variations
+                    for (const base of baseTitles) {
+                        const variations = [
+                            `${base} | ${partType}`,
+                            `${base} | ${searchPart}`,
+                            `${base} | ${partType.toLowerCase()}`,
+                            `${base} | ${searchPart.toLowerCase()}`,
+                            `${base} - ${partType}`,
+                            `${base} (${partType})`,
+                        ];
+
+                        if (base.includes("Elijah")) {
+                            const vCodes = variations[0].split('').map(c => c.charCodeAt(0)).join(',');
+                            logDebug(`Checking Elijah vars for base "${base}": ${vCodes}`);
+                        }
+
+                        for (const v of variations) {
+                            if (base.includes("Elijah") || isDebug) {
+                                const res = findSongId(v);
+                                if (isDebug) console.log(`  [DEBUG] Checking: "${v}" -> Found: ${res}`);
+
+                                if (base.includes("Elijah")) {
+                                    const vCodes = v.split('').map(c => c.charCodeAt(0)).join(',');
+                                    logDebug(`  Checking: "${v}" Codes: ${vCodes} -> Found: ${res}`);
+                                }
+                                foundPartId = res;
+                            } else {
+                                foundPartId = findSongId(v);
+                            }
+                            if (foundPartId) break;
+                        }
+                        if (foundPartId) break; // Found a match with this base title
                     }
+
+                    // (Redundant loop removed)
 
                     if (foundPartId) {
                         if (item.parts[partType] !== foundPartId) {
-                            console.log(`  Updating part ${partType} for "${baseTitle}": ${item.parts[partType]} -> ${foundPartId}`);
+                            console.log(`  Updating part ${partType} for "${cleanItemTitle}": ${item.parts[partType]} -> ${foundPartId}`);
                             item.parts[partType] = foundPartId;
                         }
                     } else {
                         // STRICT: If not found, set to null. User said "dont put it".
                         if (item.parts[partType] !== null) {
-                            console.log(`  Removing part ${partType} for "${baseTitle}" (Not found)`);
+                            console.log(`  Removing part ${partType} for "${cleanItemTitle}" (Not found)`);
                             item.parts[partType] = null;
                         }
                     }
@@ -146,12 +212,8 @@ function run() {
             }
 
             // Update Pages & Special Fixes
-            if (cleanTitle(item.title).toLowerCase().includes('emmanuel')) {
-                // User wants "put only one sheet".
-                // Let's keep the first page if it exists, or just the main song as a single page?
-                // Usually pages array is [ {label: "Pg 1", id: ...}, ... ]
-                // If we just want 1 sheet, we can reduce it.
-                // Assuming the main song ID is the sheet.
+            const emmanuelCheck = cleanTitle(item.title).toLowerCase();
+            if (emmanuelCheck.includes('emmanuel')) {
                 if (item.pages && item.pages.length > 1) {
                     console.log(`  Fixing Emmanuel pages (reducing to 1)`);
                     item.pages = [
@@ -162,14 +224,46 @@ function run() {
                 // For other songs, update IDs if we have a new main song ID
                 for (const page of item.pages) {
                     if (newSongId) {
-                        // Only update if it was pointing to the old main song? 
-                        // Or just always update to main song?
-                        // User said "if the song name isnt the same... dont put it".
-                        // But for pages, typically "Pg 1" IS the main song PDF.
-
-                        // Heuristic: If page.id was same as old item.songId, update it.
-                        // Or if we are confident newSongId is correct.
                         page.id = newSongId;
+                    }
+                }
+            }
+
+            // Sync Title with Song Title (Preserve Number & Suffix)
+            if (newSongId) {
+                // Find the song object to get the exact clean title
+                // We built maps: titleMap (exact), cleanedMap (lower).
+                // We need to look up the song by ID strictly to get the formatting.
+                const songObj = songs.find(s => s.id === newSongId);
+                if (songObj) {
+                    const originalTitle = item.title;
+
+                    // Extract Prefix (Number)
+                    const prefixMatch = originalTitle.match(/^(\d+[\.\s]*\s*)/);
+                    const prefix = prefixMatch ? prefixMatch[1] : '';
+
+                    // Extract Suffix ( – Soloist etc)
+                    // We split by ' – ' or ' - ' to find the separator used
+                    let separator = '';
+                    let suffix = '';
+                    if (originalTitle.includes(' – ')) {
+                        separator = ' – ';
+                        suffix = originalTitle.split(' – ').slice(1).join(' – ');
+                    } else if (originalTitle.includes(' - ')) {
+                        separator = ' - ';
+                        suffix = originalTitle.split(' - ').slice(1).join(' - ');
+                    }
+
+                    // Construct New Title
+                    let newTitle = prefix + songObj.title;
+                    if (suffix) {
+                        newTitle += separator + suffix;
+                    }
+
+                    if (item.title !== newTitle) {
+                        console.log(`  Renaming "${item.title}" -> "${newTitle}"`);
+                        item.title = newTitle;
+                        updatedCount++;
                     }
                 }
             }

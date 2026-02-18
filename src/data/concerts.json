@@ -18,7 +18,7 @@
       },
       {
         "id": "2",
-        "title": "Mighty to Save – Bianca Timaru",
+        "title": "Mighty to save – Bianca Timaru",
         "songId": "101",
         "notes": "Solo Bianca Timaru",
         "parts": {
@@ -132,13 +132,19 @@
       },
       {
         "id": "13",
-        "title": "The Days of Elijah – solo Dara",
+        "title": "The days of Elijah – solo Dara",
         "songId": "148",
-        "notes": "Solo Dara"
+        "notes": "Solo Dara",
+        "parts": {
+          "Sopran": "175",
+          "Alto": "179",
+          "Tenor": "173",
+          "Bass": "170"
+        }
       },
       {
         "id": "14",
-        "title": "Heaven Is in My Heart – Iustin, Ovidiu, Mălina și Katy",
+        "title": "Heaven is in my heart – Iustin, Ovidiu, Mălina și Katy",
         "songId": "60",
         "notes": "Solo Iustin, Ovidiu, Mălina, Katy",
         "parts": {
@@ -198,13 +204,13 @@
     "items": [
       {
         "id": "201",
-        "title": "1 Intrare – Come and Fill This Temple",
-        "songId": null,
+        "title": "1 Come and fill this temple",
+        "songId": "10",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "13",
+          "Alto": "11",
+          "Tenor": "14",
+          "Bass": "12"
         }
       },
       {
@@ -280,12 +286,13 @@
     "items": [
       {
         "id": "301",
-        "title": "1 Intrare – Spera in Domnul",
+        "title": "1 Spera in Domnul",
         "songId": null,
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Bass": null
+          "Sopran": "140",
+          "Alto": "138",
+          "Tenor": "141",
+          "Bass": "139"
         },
         "pages": []
       },
@@ -334,13 +341,13 @@
       },
       {
         "id": "307",
-        "title": "7 Doamne, intr-o m-ai strigat",
-        "songId": null,
+        "title": "7 Doamne, intr o zi m ai chemat",
+        "songId": "29",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "29",
+          "Alto": "29",
+          "Tenor": "29",
+          "Bass": "29"
         },
         "pages": []
       },
@@ -350,6 +357,8 @@
         "songId": null,
         "parts": {
           "Sopran": "8",
+          "Alto": "6",
+          "Tenor": "9",
           "Bass": "7"
         }
       }
@@ -361,20 +370,26 @@
     "items": [
       {
         "id": "401",
-        "title": "1 Intrare – Come and Follow Me",
-        "songId": null,
+        "title": "1 Come and follow me",
+        "songId": "15",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "18",
+          "Alto": "16",
+          "Tenor": "19",
+          "Bass": "17"
         },
         "pages": []
       },
       {
         "id": "402",
-        "title": "2 Kyrie – Doamne, Tu ai fost trimis la noi (italiana)",
-        "songId": "81"
+        "title": "2 Kyrie Bunoza",
+        "songId": null,
+        "parts": {
+          "Sopran": "84",
+          "Alto": "82",
+          "Tenor": "85",
+          "Bass": "83"
+        }
       },
       {
         "id": "403",
@@ -404,13 +419,13 @@
       },
       {
         "id": "407",
-        "title": "7 Ti cerco Signore (Te caut, o Doamne)",
+        "title": "7 Te caut o Doamne",
         "songId": null,
         "parts": {
           "Sopran": null,
-          "Alto": null,
+          "Alto": "143",
           "Tenor": null,
-          "Bass": null
+          "Bass": "144"
         },
         "pages": []
       },
@@ -439,13 +454,25 @@
       },
       {
         "id": "502",
-        "title": "2 Kyrie – Doamne Isuse",
-        "songId": "81"
+        "title": "2 Kyrie Bunoza",
+        "songId": null,
+        "parts": {
+          "Sopran": "84",
+          "Alto": "82",
+          "Tenor": "85",
+          "Bass": "83"
+        }
       },
       {
         "id": "503",
-        "title": "3 Psalm – In veci voi canta (italiana)",
-        "songId": null
+        "title": "3 In veci voi canta",
+        "songId": null,
+        "parts": {
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": "66"
+        }
       },
       {
         "id": "504",
@@ -480,7 +507,13 @@
       {
         "id": "510",
         "title": "9 Bless the Lord",
-        "songId": "1"
+        "songId": "1",
+        "parts": {
+          "Sopran": "4",
+          "Alto": "2",
+          "Tenor": "5",
+          "Bass": "3"
+        }
       }
     ]
   },
@@ -505,17 +538,29 @@
       },
       {
         "id": "604",
-        "title": "4 Verso l’alto (doar cu orga)",
-        "songId": null
+        "title": "4 Verso l'alto",
+        "songId": "181",
+        "parts": {
+          "Sopran": "181",
+          "Alto": "181",
+          "Tenor": "181",
+          "Bass": "181"
+        }
       },
       {
         "id": "605",
-        "title": "5 Marching Song",
-        "songId": "95"
+        "title": "5 Marching song",
+        "songId": "95",
+        "parts": {
+          "Sopran": "95",
+          "Alto": "95",
+          "Tenor": "95",
+          "Bass": "95"
+        }
       },
       {
         "id": "606",
-        "title": "6 Shine Your Light",
+        "title": "6 Shine your light",
         "songId": "132",
         "parts": {
           "Sopran": "135",
@@ -523,16 +568,7 @@
           "Tenor": "132",
           "Bass": "132"
         },
-        "pages": [
-          {
-            "label": "Pg. 1",
-            "id": "132"
-          },
-          {
-            "label": "Pg. 2",
-            "id": "132"
-          }
-        ]
+        "pages": []
       },
       {
         "id": "607",

@@ -1,0 +1,49 @@
+Reading files...
+Loaded song: "The days of Elijah" (len: 18) ID: 148
+Loaded song: "The days of Elijah | Bas" (len: 24) ID: 170
+Loaded song: "The days of Elijah | Tenor" (len: 26) ID: 173
+Loaded song: "The days of Elijah | Sopran" (len: 27) ID: 175
+Loaded song: "The days of Elijah | Alto" (len: 25) ID: 179
+Loaded 182 songs.
+Mapping "E piu bello Insieme" -> "Împreună i mai frumos"
+Mapping "The Days of Elijah" -> "The days of Elijah"
+Checking Elijah variations for Sopran: [
+  'The days of Elijah | Sopran',
+  'The days of Elijah | Sopran',
+  'The days of Elijah | sopran',
+  'The days of Elijah | sopran',
+  'The days of Elijah - Sopran',
+  'The days of Elijah (Sopran)'
+]
+  Checking: "The days of Elijah | Sopran" -> Found: 175
+Checking Elijah variations for Alto: [
+  'The days of Elijah | Alto',
+  'The days of Elijah | Alto',
+  'The days of Elijah | alto',
+  'The days of Elijah | alto',
+  'The days of Elijah - Alto',
+  'The days of Elijah (Alto)'
+]
+  Checking: "The days of Elijah | Alto" -> Found: 179
+Checking Elijah variations for Tenor: [
+  'The days of Elijah | Tenor',
+  'The days of Elijah | Tenor',
+  'The days of Elijah | tenor',
+  'The days of Elijah | tenor',
+  'The days of Elijah - Tenor',
+  'The days of Elijah (Tenor)'
+]
+  Checking: "The days of Elijah | Tenor" -> Found: 173
+Checking Elijah variations for Bass: [
+  'The days of Elijah | Bass',
+  'The days of Elijah | Bas',
+  'The days of Elijah | bass',
+  'The days of Elijah | bas',
+  'The days of Elijah - Bass',
+  'The days of Elijah (Bass)'
+]
+  Checking: "The days of Elijah | Bass" -> Found: null
+  Checking: "The days of Elijah | Bas" -> Found: 170
+Mapping "Heaven Is in My Heart" -> "Cerul e in inima mea"
+Updated 0 items.
+Saved concerts.json
