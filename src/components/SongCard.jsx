@@ -2,23 +2,7 @@ import React from 'react';
 import { FileText, Play, Music2, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const MarqueeWrapper = ({ children, text, className, threshold = 20 }) => {
-    const shouldMarquee = text && text.length > threshold;
 
-    if (!shouldMarquee) {
-        return <div className={`truncate ${className}`}>{children}</div>;
-    }
-
-    return (
-        <div className={`marquee-wrap ${className}`}>
-            <div className="marquee-content">
-                {children}
-                <span className="inline-block w-8"></span>
-                {children}
-            </div>
-        </div>
-    );
-};
 
 import { logFileOpen } from '../utils/logger';
 
@@ -39,18 +23,18 @@ const SongCard = ({ song, index }) => {
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                    <MarqueeWrapper text={song.title} className="text-lg font-serif font-semibold text-main" threshold={20}>
+                    <h3 className="text-lg font-serif font-semibold text-main truncate" title={song.title}>
                         {song.title}
-                    </MarqueeWrapper>
+                    </h3>
 
                     <div className="mt-1">
-                        <MarqueeWrapper text={`${song.composer} - ${song.category}`} className="text-sm text-muted" threshold={30}>
+                        <div className="text-sm text-muted truncate">
                             <div className="flex items-center gap-2">
                                 <span className="font-medium">{song.composer}</span>
                                 <span className="w-1 h-1 bg-border rounded-full flex-shrink-0"></span>
                                 <span>{song.category}</span>
                             </div>
-                        </MarqueeWrapper>
+                        </div>
                     </div>
                 </div>
 

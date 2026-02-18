@@ -1,13 +1,12 @@
 /**
- * HARMONIA CHRISTI - SONG JSON GENERATOR (IMAGES SUPPORT)
+ * HARMONIA CHRISTI - SONG JSON GENERATOR (SEQUENTIAL IDs)
  * =======================================================
- * 
- * VERSION 5: Now includes PHOTOS (jpg, png) as sheet music.
  * 
  * INSTRUCTIONS:
  * 1. Replace ALL code with this version.
  * 2. Run `generateSongJson`.
  * 3. Copy the output chunks from the Log.
+ * 4. This will generate a FRESH list with IDs 1, 2, 3...
  */
 
 function generateSongJson() {
@@ -32,13 +31,19 @@ function generateSongJson() {
             return a.title.localeCompare(b.title);
         });
 
+        // RE-ASSIGN IDs SEQUENTIALLY AFTER SORTING
+        // This ensures ID 1 is the first alphabetical song, etc.
+        for (var i = 0; i < songList.length; i++) {
+            songList[i].id = String(i + 1);
+        }
+
         var fullJson = JSON.stringify(songList, null, 2);
 
         var chunkSize = 4000;
         var totalLength = fullJson.length;
         var chunks = Math.ceil(totalLength / chunkSize);
 
-        Logger.log("Found " + songList.length + " items (Audio + Photos). Printing in " + chunks + " parts.");
+        Logger.log("Found " + songList.length + " items. IDs assigned 1 to " + songList.length + ".");
         Logger.log("--- START COPYING BELOW ---");
 
         for (var i = 0; i < chunks; i++) {
@@ -73,7 +78,6 @@ function processFile(file, map) {
     var mimeType = file.getMimeType();
     var fileId = file.getId();
 
-    // SUPPORTED TYPES: PDF, Audio, Video, AND NOW IMAGES (JPG, PNG, HEIC)
     var isAudio = mimeType.includes("audio") || mimeType === "video/mp4";
     var isVisual = mimeType === "application/pdf" || mimeType.includes("image");
 
@@ -89,11 +93,11 @@ function processFile(file, map) {
 
     if (!map[key]) {
         map[key] = {
-            id: Math.random().toString(36).substr(2, 9),
+            id: "TEMP", // Will be re-assigned after sorting
             title: baseName,
             composer: "Unknown",
             category: "General",
-            driveIdPdf: "", // Will hold PDF or Image ID
+            driveIdPdf: "",
             driveIdAudio: ""
         };
 
@@ -105,10 +109,6 @@ function processFile(file, map) {
     }
 
     if (isVisual) {
-        // If multiple images exist for the same song, this might overwrite. 
-        // Ideally we'd have a list, but the UI expects one link. We'll take the first one we see.
-        // If it's already set and this is a PDF, prefer PDF?
-        // For now, simple assignment.
         if (!map[key].driveIdPdf) {
             map[key].driveIdPdf = fileId;
         }

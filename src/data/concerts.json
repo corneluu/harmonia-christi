@@ -28,13 +28,13 @@
       {
         "id": "2",
         "title": "Mighty to Save – Bianca Timaru",
-        "songId": "122",
+        "songId": "101",
         "notes": "Solo Bianca Timaru",
         "parts": {
-          "Sopran": "125",
-          "Alto": "123",
-          "Tenor": "126",
-          "Bass": "122"
+          "Sopran": "104",
+          "Alto": "102",
+          "Tenor": "105",
+          "Bass": "103"
         }
       },
       {
@@ -58,30 +58,30 @@
       {
         "id": "5",
         "title": "Emmanuel – Iustin, Ovidiu și Ana",
-        "songId": "37",
+        "songId": "30",
         "notes": "Solo Iustin, Ovidiu, Ana",
         "parts": {
-          "Sopran": "40",
-          "Alto": "38",
-          "Tenor": "41",
-          "Bass": "37"
+          "Sopran": "33",
+          "Alto": "31",
+          "Tenor": "34",
+          "Bass": "32"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "37"
+            "id": "30"
           },
           {
             "label": "Pg. 2",
-            "id": "37"
+            "id": "30"
           },
           {
             "label": "Pg. 3",
-            "id": "37"
+            "id": "30"
           },
           {
             "label": "Text",
-            "id": "37"
+            "id": "30"
           }
         ]
       },
@@ -130,7 +130,7 @@
       {
         "id": "10",
         "title": "Jesus Loves Me – Iustin",
-        "songId": "96",
+        "songId": "76",
         "notes": "Solo Iustin"
       },
       {
@@ -142,25 +142,25 @@
       {
         "id": "12",
         "title": "Bless the Lord – Augustin",
-        "songId": "3",
+        "songId": "1",
         "notes": "Solo Augustin",
         "parts": {
-          "Sopran": "6",
-          "Alto": "4",
-          "Tenor": "7",
+          "Sopran": "4",
+          "Alto": "2",
+          "Tenor": "5",
           "Bass": "3"
         }
       },
       {
         "id": "13",
         "title": "The Days of Elijah – solo Dara",
-        "songId": "176",
+        "songId": "148",
         "notes": "Solo Dara"
       },
       {
         "id": "14",
         "title": "Heaven Is in My Heart – Iustin, Ovidiu, Mălina și Katy",
-        "songId": "74",
+        "songId": "60",
         "notes": "Solo Iustin, Ovidiu, Mălina, Katy",
         "parts": {
           "Sopran": "74",
@@ -291,10 +291,10 @@
         "title": "7 La vera gioia",
         "songId": "106",
         "parts": {
-          "Sopran": "106",
-          "Alto": "106",
-          "Tenor": "106",
-          "Bass": "106"
+          "Sopran": "88",
+          "Alto": "86",
+          "Tenor": "89",
+          "Bass": "87"
         }
       },
       {
@@ -341,7 +341,7 @@
           "Sopran": "86",
           "Alto": "86",
           "Tenor": "86",
-          "Bass": "86"
+          "Bass": "66"
         }
       },
       {
@@ -398,7 +398,7 @@
         "songId": "8",
         "parts": {
           "Sopran": "8",
-          "Bass": "8"
+          "Bass": "7"
         }
       }
     ]
@@ -431,7 +431,7 @@
       {
         "id": "402",
         "title": "2 Kyrie – Doamne, Tu ai fost trimis la noi (italiana)",
-        "songId": "101"
+        "songId": "81"
       },
       {
         "id": "403",
@@ -452,7 +452,7 @@
       {
         "id": "405",
         "title": "5 Sanctus – coral cu orga",
-        "songId": "147"
+        "songId": "123"
       },
       {
         "id": "406",
@@ -527,7 +527,7 @@
       {
         "id": "502",
         "title": "2 Kyrie – Doamne Isuse",
-        "songId": "101"
+        "songId": "81"
       },
       {
         "id": "503",
@@ -567,7 +567,7 @@
       {
         "id": "510",
         "title": "9 Bless the Lord",
-        "songId": "3"
+        "songId": "1"
       }
     ]
   },
@@ -598,26 +598,26 @@
       {
         "id": "605",
         "title": "5 Marching Song",
-        "songId": "115"
+        "songId": "95"
       },
       {
         "id": "606",
         "title": "6 Shine Your Light",
-        "songId": "156",
+        "songId": "132",
         "parts": {
-          "Sopran": "159",
-          "Alto": "157",
+          "Sopran": "135",
+          "Alto": "133",
           "Tenor": "160",
           "Bass": "156"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "156"
+            "id": "132"
           },
           {
             "label": "Pg. 2",
-            "id": "156"
+            "id": "132"
           }
         ]
       },

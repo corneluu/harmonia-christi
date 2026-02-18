@@ -41,20 +41,25 @@ const SongList = () => {
             // Voice type filters
             if (['sopran', 'alto', 'tenor', 'bass'].includes(filter)) {
                 const titleLower = song.title.toLowerCase();
-                const matchesVoice = filter === 'bass'
-                    ? (titleLower.includes('bass') || titleLower.includes('bas'))
-                    : titleLower.includes(filter);
+                // Strict voice matching
+                // Check for "| Voice" or "(Voice)" or " - Voice"
+                // Handle "Bass" matching "Bas"
 
-                // If it matches the voice, or if it's a general song (no voice in name) 
-                // but we have a PDF, maybe show it? 
-                // Actually, if they chose "Sopran", they usually only want Sopran.
-                // But the user's specific song "Kyrie" doesn't have a voice name.
-                // Let's make it so that if a song has NO voice name but has a PDF, it shows up in "All".
+                const searchVoice = filter === 'bass' ? ['bass', 'bas'] : [filter];
 
-                if (!song.driveIdAudio && !matchesVoice) return false;
-                if (song.driveIdAudio && !matchesVoice) return false;
+                const matchesVoice = searchVoice.some(v => {
+                    const suffixPipe = `| ${v}`;
+                    const suffixParen = `(${v})`;
+                    const suffixDash = `- ${v}`;
+                    return titleLower.includes(suffixPipe) || titleLower.includes(suffixParen) || titleLower.includes(suffixDash);
+                });
 
-                return true;
+                if (matchesVoice) return true;
+
+                // Also allow if specific part property exists (future proofing) or if we are strict about "folder" view?
+                // User wants "Alto" tab to show Alto parts.
+
+                return false;
             }
 
             return true;
