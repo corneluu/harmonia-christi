@@ -9,10 +9,10 @@
         "songId": "181",
         "notes": "Solo Bianca Martin",
         "parts": {
-          "Sopran": "184",
-          "Alto": "182",
-          "Tenor": "185",
-          "Bass": "181"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         },
         "pages": [
           {
@@ -68,19 +68,7 @@
         },
         "pages": [
           {
-            "label": "Pg. 1",
-            "id": "30"
-          },
-          {
-            "label": "Pg. 2",
-            "id": "30"
-          },
-          {
-            "label": "Pg. 3",
-            "id": "30"
-          },
-          {
-            "label": "Text",
+            "label": "Partitură",
             "id": "30"
           }
         ]
@@ -163,10 +151,10 @@
         "songId": "60",
         "notes": "Solo Iustin, Ovidiu, Mălina, Katy",
         "parts": {
-          "Sopran": "74",
-          "Alto": "74",
-          "Tenor": "74",
-          "Bass": "74"
+          "Sopran": "60",
+          "Alto": "60",
+          "Tenor": "60",
+          "Bass": "60"
         }
       },
       {
@@ -222,10 +210,10 @@
         "title": "1 Intrare – Come and Fill This Temple",
         "songId": "14",
         "parts": {
-          "Sopran": "17",
-          "Alto": "15",
-          "Tenor": "18",
-          "Bass": "14"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         }
       },
       {
@@ -264,10 +252,10 @@
         "title": "5 Sanctus Intc",
         "songId": "147",
         "parts": {
-          "Sopran": "150",
-          "Alto": "148",
-          "Tenor": "151",
-          "Bass": "147"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         }
       },
       {
@@ -313,9 +301,9 @@
         "title": "1 Intrare – Spera in Domnul",
         "songId": "165",
         "parts": {
-          "Sopran": "165",
-          "Alto": "165",
-          "Bass": "165"
+          "Sopran": null,
+          "Alto": null,
+          "Bass": null
         },
         "pages": [
           {
@@ -338,9 +326,9 @@
         "title": "3 In veci voi canta",
         "songId": "86",
         "parts": {
-          "Sopran": "86",
-          "Alto": "86",
-          "Tenor": "86",
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
           "Bass": "66"
         }
       },
@@ -360,10 +348,10 @@
         "title": "5 Sanctus coral",
         "songId": "147",
         "parts": {
-          "Sopran": "150",
-          "Alto": "148",
-          "Tenor": "151",
-          "Bass": "147"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         }
       },
       {
@@ -412,10 +400,10 @@
         "title": "1 Intrare – Come and Follow Me",
         "songId": "19",
         "parts": {
-          "Sopran": "22",
-          "Alto": "20",
-          "Tenor": "23",
-          "Bass": "19"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         },
         "pages": [
           {
@@ -443,10 +431,10 @@
         "title": "4 Ofertoriu – O Christe Domine Jesu",
         "songId": "128",
         "parts": {
-          "Sopran": "131",
-          "Alto": "129",
-          "Tenor": "132",
-          "Bass": "128"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         }
       },
       {
@@ -504,10 +492,10 @@
         "title": "1 Intrare – Emmanuel",
         "songId": "37",
         "parts": {
-          "Sopran": "40",
-          "Alto": "38",
-          "Tenor": "41",
-          "Bass": "37"
+          "Sopran": null,
+          "Alto": null,
+          "Tenor": null,
+          "Bass": null
         },
         "pages": [
           {
@@ -607,8 +595,8 @@
         "parts": {
           "Sopran": "135",
           "Alto": "133",
-          "Tenor": "160",
-          "Bass": "156"
+          "Tenor": "132",
+          "Bass": "132"
         },
         "pages": [
           {

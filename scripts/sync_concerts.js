@@ -85,58 +85,81 @@ function run() {
 
             // Update Parts
             if (item.parts) {
-                for (const partType of Object.keys(item.parts)) {
-                    // key is "Sopran", "Alto", etc.
-                    // We need to find a song named "Title | PartType"
-                    // The base title is 'item.title' (cleaned).
+                // Special handling for "Emmanuel" to have only 1 page if requested? 
+                // Actually the user said "put only one sheet" for Emmanuel. This is about 'pages', not 'parts'.
+                // But let's fix parts first.
 
+                for (const partType of Object.keys(item.parts)) {
                     const baseTitle = cleanTitle(item.title);
 
-                    // Variations to try:
-                    // "Title | Part"
-                    // "Title | Part " (trailing space?)
-                    // "Title | PartType" (case sensitive?)
-
-                    // Specific fix for "Bas" vs "Bass"
+                    // Specific fix for "Bass" vs "Bas"
                     let searchPart = partType;
-                    if (partType === 'Bass') searchPart = 'Bas'; // songs.json seems to use "Bas" often
+                    if (partType === 'Bass') searchPart = 'Bas';
+
+                    // STRICT variations only. 
+                    // We expect "Title | Part" or "Title (Part)" or "Title - Part".
+                    // We DO NOT match just "Title" (main song).
 
                     const variations = [
                         `${baseTitle} | ${partType}`,
                         `${baseTitle} | ${searchPart}`,
                         `${baseTitle} | ${partType.toLowerCase()}`,
                         `${baseTitle} | ${searchPart.toLowerCase()}`,
-                        `${baseTitle} ${partType}`, // "Song Name Bas"
+                        `${baseTitle} - ${partType}`,
+                        `${baseTitle} (${partType})`,
+                        // Handle "Title Part" e.g. "Song Bas" if that is a pattern, but be careful.
+                        // songs.json usually has "|".
                     ];
 
                     let foundPartId = null;
                     for (const v of variations) {
+                        // We need a way to find EXACT or very close match, checking our titleMap/cleanedMap.
+                        // Our findSongId does exact or cleaned match.
+                        // But we want to ensure we don't accidentally match the main song if the main song IS "Title".
+                        // The variations above include the part name, so they shouldn't match "Title" unless "Title" literally contains the part name.
                         foundPartId = findSongId(v);
                         if (foundPartId) break;
                     }
 
                     if (foundPartId) {
                         if (item.parts[partType] !== foundPartId) {
-                            // console.log(`  Updating part ${partType}: ${item.parts[partType]} -> ${foundPartId}`);
+                            console.log(`  Updating part ${partType} for "${baseTitle}": ${item.parts[partType]} -> ${foundPartId}`);
                             item.parts[partType] = foundPartId;
                         }
                     } else {
-                        // Fallback: If not found, look for "Bass" if we searched "Bas"
-                        // songs.json has "Bless the lord | Bas" (lowercase lord, Bas)
-                        // My cleanedMap should handle case.
-                        console.warn(`  Could not find part "${partType}" for "${baseTitle}"`);
+                        // STRICT: If not found, set to null. User said "dont put it".
+                        if (item.parts[partType] !== null) {
+                            console.log(`  Removing part ${partType} for "${baseTitle}" (Not found)`);
+                            item.parts[partType] = null;
+                        }
                     }
                 }
             }
 
-            // Update Pages
-            if (item.pages) {
+            // Update Pages & Special Fixes
+            if (cleanTitle(item.title).toLowerCase().includes('emmanuel')) {
+                // User wants "put only one sheet".
+                // Let's keep the first page if it exists, or just the main song as a single page?
+                // Usually pages array is [ {label: "Pg 1", id: ...}, ... ]
+                // If we just want 1 sheet, we can reduce it.
+                // Assuming the main song ID is the sheet.
+                if (item.pages && item.pages.length > 1) {
+                    console.log(`  Fixing Emmanuel pages (reducing to 1)`);
+                    item.pages = [
+                        { label: "Partitură", id: newSongId || item.songId }
+                    ];
+                }
+            } else if (item.pages) {
+                // For other songs, update IDs if we have a new main song ID
                 for (const page of item.pages) {
-                    // Usually pages link to the main song ID or specific ID. 
-                    // If the page has an ID, we assume it refers to the same song ID or we need to find it?
-                    // Usually pages id matches the main song id.
-                    // Let's just update match the main song ID if we found one.
                     if (newSongId) {
+                        // Only update if it was pointing to the old main song? 
+                        // Or just always update to main song?
+                        // User said "if the song name isnt the same... dont put it".
+                        // But for pages, typically "Pg 1" IS the main song PDF.
+
+                        // Heuristic: If page.id was same as old item.songId, update it.
+                        // Or if we are confident newSongId is correct.
                         page.id = newSongId;
                     }
                 }
