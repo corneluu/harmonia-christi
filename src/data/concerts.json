@@ -6,41 +6,41 @@
       {
         "id": "1",
         "title": "This Little Light – Bianca Martin",
-        "songId": "149",
+        "songId": "181",
         "notes": "Solo Bianca Martin",
         "parts": {
-          "Sopran": "152",
-          "Alto": "150",
-          "Tenor": "153",
-          "Bass": "149"
+          "Sopran": "184",
+          "Alto": "182",
+          "Tenor": "185",
+          "Bass": "181"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "149"
+            "id": "181"
           },
           {
             "label": "Pg. 2",
-            "id": "149"
+            "id": "181"
           }
         ]
       },
       {
         "id": "2",
         "title": "Mighty to Save – Bianca Timaru",
-        "songId": "101",
+        "songId": "122",
         "notes": "Solo Bianca Timaru",
         "parts": {
-          "Sopran": "104",
-          "Alto": "102",
-          "Tenor": "105",
-          "Bass": "101"
+          "Sopran": "125",
+          "Alto": "123",
+          "Tenor": "126",
+          "Bass": "122"
         }
       },
       {
         "id": "3",
         "title": "Maria vogliamo amarti – Roxana",
-        "songId": null,
+        "songId": "116",
         "notes": "Solo Roxana",
         "parts": {
           "Sopran": null,
@@ -52,43 +52,43 @@
       {
         "id": "4",
         "title": "E piu bello Insieme - Bianca Timaru?",
-        "songId": null,
+        "songId": "36",
         "notes": "Solo Bianca Timaru?"
       },
       {
         "id": "5",
         "title": "Emmanuel – Iustin, Ovidiu și Ana",
-        "songId": "30",
+        "songId": "37",
         "notes": "Solo Iustin, Ovidiu, Ana",
         "parts": {
-          "Sopran": "33",
-          "Alto": "31",
-          "Tenor": "34",
-          "Bass": "30"
+          "Sopran": "40",
+          "Alto": "38",
+          "Tenor": "41",
+          "Bass": "37"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "30"
+            "id": "37"
           },
           {
             "label": "Pg. 2",
-            "id": "30"
+            "id": "37"
           },
           {
             "label": "Pg. 3",
-            "id": "30"
+            "id": "37"
           },
           {
             "label": "Text",
-            "id": "30"
+            "id": "37"
           }
         ]
       },
       {
         "id": "6",
         "title": "Sono qui a lodarti (Here I Am to Worship) – Katy",
-        "songId": null,
+        "songId": "163",
         "notes": "Solo Katy",
         "parts": {
           "Sopran": null,
@@ -100,13 +100,13 @@
       {
         "id": "7",
         "title": "Solo Mălina – (piesă de confirmat)",
-        "songId": null,
+        "songId": "162",
         "notes": "Piesă de confirmat"
       },
       {
         "id": "8",
         "title": "Hosanna",
-        "songId": null,
+        "songId": "75",
         "notes": "Solo Iustin, Adina, Ovidiu, Malina",
         "parts": {
           "Sopran": null,
@@ -118,7 +118,7 @@
       {
         "id": "9",
         "title": "Hallelujah Your Love Makes Me Sing – Augustin",
-        "songId": null,
+        "songId": "73",
         "notes": "Solo Augustin",
         "parts": {
           "Sopran": null,
@@ -130,49 +130,49 @@
       {
         "id": "10",
         "title": "Jesus Loves Me – Iustin",
-        "songId": "76",
+        "songId": "96",
         "notes": "Solo Iustin"
       },
       {
         "id": "11",
         "title": "Christ Our Light – solo Mălina",
-        "songId": null,
+        "songId": "13",
         "notes": "Solo Mălina"
       },
       {
         "id": "12",
         "title": "Bless the Lord – Augustin",
-        "songId": "1",
+        "songId": "3",
         "notes": "Solo Augustin",
         "parts": {
-          "Sopran": "4",
-          "Alto": "2",
-          "Tenor": "5",
-          "Bass": "1"
+          "Sopran": "6",
+          "Alto": "4",
+          "Tenor": "7",
+          "Bass": "3"
         }
       },
       {
         "id": "13",
         "title": "The Days of Elijah – solo Dara",
-        "songId": "148",
+        "songId": "176",
         "notes": "Solo Dara"
       },
       {
         "id": "14",
         "title": "Heaven Is in My Heart – Iustin, Ovidiu, Mălina și Katy",
-        "songId": "60",
+        "songId": "74",
         "notes": "Solo Iustin, Ovidiu, Mălina, Katy",
         "parts": {
-          "Sopran": "60",
-          "Alto": "60",
-          "Tenor": "60",
-          "Bass": "60"
+          "Sopran": "74",
+          "Alto": "74",
+          "Tenor": "74",
+          "Bass": "74"
         }
       },
       {
         "id": "15",
         "title": "Oh Happy Day – Iustin",
-        "songId": null,
+        "songId": "138",
         "notes": "Solo Iustin"
       }
     ]
@@ -184,32 +184,32 @@
       {
         "id": "101",
         "title": "1 (Backup) Grazie Gesu (Tu esti pacea)",
-        "songId": null
+        "songId": "61"
       },
       {
         "id": "102",
         "title": "2 Gesu io credo in te (Isuse, cred in Tine)",
-        "songId": null
+        "songId": "43"
       },
       {
         "id": "103",
         "title": "3 Dona la pace",
-        "songId": null
+        "songId": "35"
       },
       {
         "id": "104",
         "title": "4 Guariscimi",
-        "songId": null
+        "songId": "62"
       },
       {
         "id": "105",
         "title": "5 (Backup) Ti dono il mio cuore Gesu",
-        "songId": null
+        "songId": "187"
       },
       {
         "id": "106",
         "title": "6 Gesu tu sei il mio Dio",
-        "songId": null
+        "songId": "44"
       }
     ]
   },
@@ -220,23 +220,23 @@
       {
         "id": "201",
         "title": "1 Intrare – Come and Fill This Temple",
-        "songId": "10",
+        "songId": "14",
         "parts": {
-          "Sopran": "13",
-          "Alto": "11",
-          "Tenor": "14",
-          "Bass": "10"
+          "Sopran": "17",
+          "Alto": "15",
+          "Tenor": "18",
+          "Bass": "14"
         }
       },
       {
         "id": "202",
         "title": "2 Kyrie scurt",
-        "songId": "81"
+        "songId": "101"
       },
       {
         "id": "203",
         "title": "3 Psalm – In veci voi canta (italiana)",
-        "songId": null,
+        "songId": "85",
         "parts": {
           "Sopran": null,
           "Alto": null,
@@ -246,39 +246,39 @@
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "77"
+            "id": "97"
           },
           {
             "label": "Pg. 2",
-            "id": "78"
+            "id": "98"
           }
         ]
       },
       {
         "id": "204",
         "title": "4 Veni Sancte Intc",
-        "songId": null
+        "songId": "204"
       },
       {
         "id": "205",
         "title": "5 Sanctus Intc",
-        "songId": "123",
+        "songId": "147",
         "parts": {
-          "Sopran": "126",
-          "Alto": "124",
-          "Tenor": "127",
-          "Bass": "123"
+          "Sopran": "150",
+          "Alto": "148",
+          "Tenor": "151",
+          "Bass": "147"
         }
       },
       {
         "id": "206",
         "title": "6 Agnus Dei",
-        "songId": null
+        "songId": "1"
       },
       {
         "id": "207",
         "title": "7 Tu sei prezioso",
-        "songId": null,
+        "songId": "203",
         "parts": {
           "Sopran": null,
           "Alto": null,
@@ -289,18 +289,18 @@
       {
         "id": "208",
         "title": "7 La vera gioia",
-        "songId": "86",
+        "songId": "106",
         "parts": {
-          "Sopran": "86",
-          "Alto": "86",
-          "Tenor": "86",
-          "Bass": "86"
+          "Sopran": "106",
+          "Alto": "106",
+          "Tenor": "106",
+          "Bass": "106"
         }
       },
       {
         "id": "209",
         "title": "8 Ave Maria Intc",
-        "songId": null
+        "songId": "2"
       }
     ]
   },
@@ -311,43 +311,43 @@
       {
         "id": "301",
         "title": "1 Intrare – Spera in Domnul",
-        "songId": "138",
+        "songId": "165",
         "parts": {
-          "Sopran": "138",
-          "Alto": "138",
-          "Bass": "138"
+          "Sopran": "165",
+          "Alto": "165",
+          "Bass": "165"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "138"
+            "id": "165"
           },
           {
             "label": "Pg. 2",
-            "id": "138"
+            "id": "165"
           }
         ]
       },
       {
         "id": "302",
         "title": "2 Kyrie scurt",
-        "songId": "81"
+        "songId": "101"
       },
       {
         "id": "303",
         "title": "3 In veci voi canta",
-        "songId": "66",
+        "songId": "86",
         "parts": {
-          "Sopran": "66",
-          "Alto": "66",
-          "Tenor": "66",
-          "Bass": "66"
+          "Sopran": "86",
+          "Alto": "86",
+          "Tenor": "86",
+          "Bass": "86"
         }
       },
       {
         "id": "304",
         "title": "4 Maria vogliamo amarti",
-        "songId": null,
+        "songId": "116",
         "parts": {
           "Sopran": null,
           "Alto": null,
@@ -358,23 +358,23 @@
       {
         "id": "305",
         "title": "5 Sanctus coral",
-        "songId": "123",
+        "songId": "147",
         "parts": {
-          "Sopran": "126",
-          "Alto": "124",
-          "Tenor": "127",
-          "Bass": "123"
+          "Sopran": "150",
+          "Alto": "148",
+          "Tenor": "151",
+          "Bass": "147"
         }
       },
       {
         "id": "306",
         "title": "6 Agnus Dei",
-        "songId": null
+        "songId": "1"
       },
       {
         "id": "307",
         "title": "7 Doamne, intr-o m-ai strigat",
-        "songId": null,
+        "songId": "34",
         "parts": {
           "Sopran": null,
           "Alto": null,
@@ -384,21 +384,21 @@
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "32"
+            "id": "39"
           },
           {
             "label": "Pg. 2",
-            "id": "33"
+            "id": "40"
           }
         ]
       },
       {
         "id": "308",
         "title": "8 Cerul e in inima mea",
-        "songId": "6",
+        "songId": "8",
         "parts": {
-          "Sopran": "6",
-          "Bass": "6"
+          "Sopran": "8",
+          "Bass": "8"
         }
       }
     ]
@@ -410,59 +410,59 @@
       {
         "id": "401",
         "title": "1 Intrare – Come and Follow Me",
-        "songId": "15",
+        "songId": "19",
         "parts": {
-          "Sopran": "18",
-          "Alto": "16",
-          "Tenor": "19",
-          "Bass": "15"
+          "Sopran": "22",
+          "Alto": "20",
+          "Tenor": "23",
+          "Bass": "19"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "15"
+            "id": "19"
           },
           {
             "label": "Pg. 2",
-            "id": "15"
+            "id": "19"
           }
         ]
       },
       {
         "id": "402",
         "title": "2 Kyrie – Doamne, Tu ai fost trimis la noi (italiana)",
-        "songId": "81"
+        "songId": "101"
       },
       {
         "id": "403",
         "title": "3 Psalm – Misericordias Domini",
-        "songId": "106"
+        "songId": "127"
       },
       {
         "id": "404",
         "title": "4 Ofertoriu – O Christe Domine Jesu",
-        "songId": "107",
+        "songId": "128",
         "parts": {
-          "Sopran": "110",
-          "Alto": "108",
-          "Tenor": "111",
-          "Bass": "107"
+          "Sopran": "131",
+          "Alto": "129",
+          "Tenor": "132",
+          "Bass": "128"
         }
       },
       {
         "id": "405",
         "title": "5 Sanctus – coral cu orga",
-        "songId": "123"
+        "songId": "147"
       },
       {
         "id": "406",
         "title": "6 Agnus Dei",
-        "songId": null
+        "songId": "1"
       },
       {
         "id": "407",
         "title": "7 Ti cerco Signore (Te caut, o Doamne)",
-        "songId": null,
+        "songId": "186",
         "parts": {
           "Sopran": null,
           "Alto": null,
@@ -472,26 +472,26 @@
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "156"
+            "id": "190"
           },
           {
             "label": "Pg. 2",
-            "id": "157"
+            "id": "191"
           },
           {
             "label": "Pg. 3",
-            "id": "158"
+            "id": "192"
           },
           {
             "label": "Pg. 4",
-            "id": "159"
+            "id": "193"
           }
         ]
       },
       {
         "id": "408",
         "title": "8 Maria vogliamo amarti",
-        "songId": null
+        "songId": "116"
       }
     ]
   },
@@ -502,72 +502,72 @@
       {
         "id": "501",
         "title": "1 Intrare – Emmanuel",
-        "songId": "30",
+        "songId": "37",
         "parts": {
-          "Sopran": "33",
-          "Alto": "31",
-          "Tenor": "34",
-          "Bass": "30"
+          "Sopran": "40",
+          "Alto": "38",
+          "Tenor": "41",
+          "Bass": "37"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "30"
+            "id": "37"
           },
           {
             "label": "Pg. 2",
-            "id": "30"
+            "id": "37"
           },
           {
             "label": "Pg. 3",
-            "id": "30"
+            "id": "37"
           }
         ]
       },
       {
         "id": "502",
         "title": "2 Kyrie – Doamne Isuse",
-        "songId": "81"
+        "songId": "101"
       },
       {
         "id": "503",
         "title": "3 Psalm – In veci voi canta (italiana)",
-        "songId": null
+        "songId": "85"
       },
       {
         "id": "504",
         "title": "4 Ofertoriu – Ti dono il mio cuore Gesu",
-        "songId": null
+        "songId": "187"
       },
       {
         "id": "505",
         "title": "5 In loc de Aleluia – Misericordias (doar refren)",
-        "songId": "106"
+        "songId": "127"
       },
       {
         "id": "506",
         "title": "6 Sanctus Intc",
-        "songId": "123"
+        "songId": "147"
       },
       {
         "id": "507",
         "title": "7 Agnus Dei",
-        "songId": null
+        "songId": "1"
       },
       {
         "id": "508",
         "title": "8 Popoli tutti (Lumea intreaga)",
-        "songId": null
+        "songId": "145"
       },
       {
         "id": "509",
         "title": "8 Dona la pace",
-        "songId": null
+        "songId": "35"
       },
       {
         "id": "510",
         "title": "9 Bless the Lord",
-        "songId": "1"
+        "songId": "3"
       }
     ]
   },
@@ -578,63 +578,63 @@
       {
         "id": "601",
         "title": "1 Siamo la gente",
-        "songId": null
+        "songId": "161"
       },
       {
         "id": "602",
         "title": "2 Gesu ci ama (Yes, Jesus Loves Me)",
-        "songId": "76"
+        "songId": "96"
       },
       {
         "id": "603",
         "title": "3 Sta navigando la mia barca",
-        "songId": null
+        "songId": "169"
       },
       {
         "id": "604",
         "title": "4 Verso l’alto (doar cu orga)",
-        "songId": null
+        "songId": "206"
       },
       {
         "id": "605",
         "title": "5 Marching Song",
-        "songId": "95"
+        "songId": "115"
       },
       {
         "id": "606",
         "title": "6 Shine Your Light",
-        "songId": "132",
+        "songId": "156",
         "parts": {
-          "Sopran": "135",
-          "Alto": "133",
-          "Tenor": "136",
-          "Bass": "132"
+          "Sopran": "159",
+          "Alto": "157",
+          "Tenor": "160",
+          "Bass": "156"
         },
         "pages": [
           {
             "label": "Pg. 1",
-            "id": "132"
+            "id": "156"
           },
           {
             "label": "Pg. 2",
-            "id": "132"
+            "id": "156"
           }
         ]
       },
       {
         "id": "607",
         "title": "7 Evenue Shalom",
-        "songId": null
+        "songId": "42"
       },
       {
         "id": "608",
         "title": "8 Gospa Majka Moja si Zdravo",
-        "songId": null
+        "songId": "60"
       },
       {
         "id": "609",
         "title": "9 Cerul sfant, intreaga lume",
-        "songId": null
+        "songId": "12"
       }
     ]
   }
