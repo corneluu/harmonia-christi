@@ -8,6 +8,7 @@ import { logFileOpen } from '../utils/logger';
 
 const SongCard = ({ song, index }) => {
     const { t } = useTranslation();
+    const [isScrolling, setIsScrolling] = React.useState(false);
 
     const handleFileClick = (type) => {
         logFileOpen(song.title, type);
@@ -23,9 +24,19 @@ const SongCard = ({ song, index }) => {
 
                 {/* Content */}
                 <div className="flex-1 min-w-0 overflow-hidden">
-                    <div className="h-8 flex items-center">
-                        <Marquee gradient={false} speed={40} delay={2} pauseOnHover={true}>
-                            <h3 className="text-lg font-serif font-semibold text-main mr-12">
+                    <div
+                        className="h-8 flex items-center cursor-pointer"
+                        onClick={() => setIsScrolling(!isScrolling)}
+                        title="Click to scroll title"
+                    >
+                        <Marquee
+                            gradient={false}
+                            speed={40}
+                            delay={0}
+                            play={isScrolling}
+                            pauseOnHover={false}
+                        >
+                            <h3 className={`text-lg font-serif font-semibold text-main mr-12 ${!isScrolling ? "truncate" : ""}`}>
                                 {song.title}
                             </h3>
                         </Marquee>
