@@ -6,15 +6,20 @@
       {
         "id": "1",
         "title": "This Little Light – Bianca Martin",
-        "songId": null,
+        "songId": "149",
         "notes": "Solo Bianca Martin",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "152",
+          "Alto": "150",
+          "Tenor": "153",
+          "Bass": "151"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "149"
+          }
+        ]
       },
       {
         "id": "2",
@@ -37,14 +42,14 @@
       {
         "id": "3",
         "title": "Maria vogliamo amarti – Roxana",
-        "songId": null,
+        "songId": "184",
         "notes": "Solo Roxana",
-        "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
-        }
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "184"
+          }
+        ]
       },
       {
         "id": "4",
@@ -79,14 +84,14 @@
       {
         "id": "6",
         "title": "Sono qui a lodarti (Here I Am to Worship) – Katy",
-        "songId": null,
+        "songId": "199",
         "notes": "Solo Katy",
-        "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
-        }
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "199"
+          }
+        ]
       },
       {
         "id": "7",
@@ -97,27 +102,38 @@
       {
         "id": "8",
         "title": "Hosanna",
-        "songId": null,
+        "songId": "61",
         "notes": "Solo Iustin, Adina, Ovidiu, Malina",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "64",
+          "Alto": "62",
+          "Tenor": "65",
+          "Bass": "63"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "61"
+          }
+        ]
       },
       {
         "id": "9",
         "title": "Hallelujah Your Love Makes Me Sing – Augustin",
-        "songId": null,
+        "songId": "51",
         "notes": "Solo Augustin",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
-        }
+          "Sopran": "52",
+          "Alto": "50",
+          "Tenor": "53",
+          "Bass": "59"
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "51"
+          }
+        ]
       },
       {
         "id": "10",
@@ -206,7 +222,13 @@
       {
         "id": "101",
         "title": "1 (Backup) Grazie Gesu (Tu esti pacea)",
-        "songId": null
+        "songId": "194",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "194"
+          }
+        ]
       },
       {
         "id": "102",
@@ -434,13 +456,13 @@
       {
         "id": "304",
         "title": "4 Maria vogliamo amarti",
-        "songId": null,
-        "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
-        }
+        "songId": "184",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "184"
+          }
+        ]
       },
       {
         "id": "305",
@@ -614,7 +636,13 @@
       {
         "id": "408",
         "title": "8 Maria vogliamo amarti",
-        "songId": null
+        "songId": "184",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "184"
+          }
+        ]
       }
     ]
   },
@@ -625,14 +653,19 @@
       {
         "id": "501",
         "title": "1 Intrare – Emmanuel",
-        "songId": null,
+        "songId": "30",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "33",
+          "Alto": "31",
+          "Tenor": "34",
+          "Bass": "32"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "30"
+          }
+        ]
       },
       {
         "id": "502",
