@@ -26,7 +26,13 @@
           "Alto": "102",
           "Tenor": "105",
           "Bass": "103"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "101"
+          }
+        ]
       },
       {
         "id": "3",
@@ -44,7 +50,13 @@
         "id": "4",
         "title": "E piu bello insieme - Bianca Timaru?",
         "songId": "190",
-        "notes": "Solo Bianca Timaru?"
+        "notes": "Solo Bianca Timaru?",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "190"
+          }
+        ]
       },
       {
         "id": "5",
@@ -111,7 +123,13 @@
         "id": "10",
         "title": "Jesus Loves Me – Iustin",
         "songId": "76",
-        "notes": "Solo Iustin"
+        "notes": "Solo Iustin",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "76"
+          }
+        ]
       },
       {
         "id": "11",
@@ -129,7 +147,13 @@
           "Alto": "2",
           "Tenor": "5",
           "Bass": "3"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "1"
+          }
+        ]
       },
       {
         "id": "13",
@@ -141,7 +165,13 @@
           "Alto": "179",
           "Tenor": "173",
           "Bass": "170"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "148"
+          }
+        ]
       },
       {
         "id": "14",
@@ -153,7 +183,13 @@
           "Alto": "60",
           "Tenor": "60",
           "Bass": "60"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "60"
+          }
+        ]
       },
       {
         "id": "15",
@@ -175,17 +211,35 @@
       {
         "id": "102",
         "title": "2 Gesu io credo in te (Isuse, cred in Tine)",
-        "songId": null
+        "songId": "193",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "193"
+          }
+        ]
       },
       {
         "id": "103",
         "title": "3 Dona la pace",
-        "songId": "200"
+        "songId": "200",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "200"
+          }
+        ]
       },
       {
         "id": "104",
         "title": "4 Guariscimi",
-        "songId": "192"
+        "songId": "192",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "192"
+          }
+        ]
       },
       {
         "id": "105",
@@ -195,7 +249,13 @@
       {
         "id": "106",
         "title": "6 Gesu tu sei il mio Dio",
-        "songId": null
+        "songId": "191",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "191"
+          }
+        ]
       }
     ]
   },
@@ -212,24 +272,41 @@
           "Alto": "11",
           "Tenor": "14",
           "Bass": "12"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "10"
+          }
+        ]
       },
       {
         "id": "202",
         "title": "2 Kyrie scurt",
-        "songId": null
+        "songId": "183",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "183"
+          }
+        ]
       },
       {
         "id": "203",
         "title": "3 Psalm – In veci voi canta (italiana)",
-        "songId": null,
+        "songId": "187",
         "parts": {
           "Sopran": null,
           "Alto": null,
           "Tenor": null,
           "Bass": null
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "187"
+          }
+        ]
       },
       {
         "id": "204",
@@ -261,26 +338,36 @@
       {
         "id": "207",
         "title": "7 Tu sei prezioso",
-        "songId": null,
+        "songId": "188",
         "parts": {
           "Sopran": null,
           "Alto": null,
           "Tenor": null,
           "Bass": null
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "188"
+          }
+        ]
       },
       {
         "id": "208",
         "title": "7 La vera gioia",
-        "songId": null,
+        "songId": "90",
         "parts": {
           "Sopran": "88",
           "Alto": "86",
           "Tenor": "89",
           "Bass": "87"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "90"
+          }
+        ]
       },
       {
         "id": "209",
@@ -296,38 +383,53 @@
       {
         "id": "301",
         "title": "1 Spera in Domnul",
-        "songId": null,
+        "songId": "137",
         "parts": {
           "Sopran": "140",
           "Alto": "138",
           "Tenor": "141",
           "Bass": "139"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "137"
+          }
+        ]
       },
       {
         "id": "302",
         "title": "2 Kyrie scurt",
-        "songId": null,
+        "songId": "183",
         "parts": {
           "Sopran": null,
           "Alto": null,
           "Tenor": null,
           "Bass": null
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "183"
+          }
+        ]
       },
       {
         "id": "303",
         "title": "3 In veci voi canta",
-        "songId": null,
+        "songId": "67",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "69",
+          "Alto": "68",
+          "Tenor": "70",
+          "Bass": "66"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "67"
+          }
+        ]
       },
       {
         "id": "304",
@@ -343,14 +445,19 @@
       {
         "id": "305",
         "title": "5 Sanctus coral",
-        "songId": null,
+        "songId": "123",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "123",
+          "Alto": "123",
+          "Tenor": "123",
+          "Bass": "123"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "123"
+          }
+        ]
       },
       {
         "id": "306",
@@ -362,10 +469,10 @@
         "title": "7 Doamne, intr o zi m ai chemat",
         "songId": "29",
         "parts": {
-          "Sopran": "29",
-          "Alto": "29",
-          "Tenor": "29",
-          "Bass": "29"
+          "Sopran": "27",
+          "Alto": "28",
+          "Tenor": "26",
+          "Bass": "25"
         },
         "pages": [
           {
@@ -377,14 +484,19 @@
       {
         "id": "308",
         "title": "8 Cerul e in inima mea",
-        "songId": null,
+        "songId": "60",
         "parts": {
           "Sopran": "8",
           "Alto": "6",
           "Tenor": "9",
           "Bass": "7"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "60"
+          }
+        ]
       }
     ]
   },
@@ -402,7 +514,12 @@
           "Tenor": "19",
           "Bass": "17"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "15"
+          }
+        ]
       },
       {
         "id": "402",
@@ -424,38 +541,53 @@
       {
         "id": "403",
         "title": "3 Psalm – Misericordias Domini",
-        "songId": null,
+        "songId": "106",
         "parts": {
           "Sopran": null,
           "Alto": null,
           "Tenor": null,
           "Bass": null
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "106"
+          }
+        ]
       },
       {
         "id": "404",
         "title": "4 Ofertoriu – O Christe Domine Jesu",
-        "songId": null,
+        "songId": "107",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "110",
+          "Alto": "108",
+          "Tenor": "111",
+          "Bass": "109"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "107"
+          }
+        ]
       },
       {
         "id": "405",
         "title": "5 Sanctus – coral cu orga",
-        "songId": null,
+        "songId": "123",
         "parts": {
           "Sopran": "126",
           "Alto": "124",
           "Tenor": "127",
           "Bass": "125"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "123"
+          }
+        ]
       },
       {
         "id": "406",
@@ -465,14 +597,19 @@
       {
         "id": "407",
         "title": "7 Te caut o Doamne",
-        "songId": null,
+        "songId": "145",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "146",
+          "Alto": "143",
+          "Tenor": "147",
+          "Bass": "144"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "145"
+          }
+        ]
       },
       {
         "id": "408",
@@ -517,14 +654,19 @@
       {
         "id": "503",
         "title": "3 In veci voi canta",
-        "songId": null,
+        "songId": "67",
         "parts": {
-          "Sopran": null,
-          "Alto": null,
-          "Tenor": null,
-          "Bass": null
+          "Sopran": "69",
+          "Alto": "68",
+          "Tenor": "70",
+          "Bass": "66"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "67"
+          }
+        ]
       },
       {
         "id": "504",
@@ -534,7 +676,13 @@
       {
         "id": "505",
         "title": "5 In loc de Aleluia – Misericordias (doar refren)",
-        "songId": null
+        "songId": "106",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "106"
+          }
+        ]
       },
       {
         "id": "506",
@@ -561,12 +709,24 @@
       {
         "id": "508",
         "title": "8 Popoli tutti (Lumea intreaga)",
-        "songId": null
+        "songId": "197",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "197"
+          }
+        ]
       },
       {
         "id": "509",
         "title": "8 Dona la pace",
-        "songId": "200"
+        "songId": "200",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "200"
+          }
+        ]
       },
       {
         "id": "510",
@@ -577,7 +737,13 @@
           "Alto": "2",
           "Tenor": "5",
           "Bass": "3"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "1"
+          }
+        ]
       }
     ]
   },
@@ -588,17 +754,35 @@
       {
         "id": "601",
         "title": "1 Siamo la gente",
-        "songId": "196"
+        "songId": "196",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "196"
+          }
+        ]
       },
       {
         "id": "602",
         "title": "2 Gesu ci ama (Yes, Jesus Loves Me)",
-        "songId": null
+        "songId": "185",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "185"
+          }
+        ]
       },
       {
         "id": "603",
         "title": "3 Sta navigando la mia barca",
-        "songId": null
+        "songId": "195",
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "195"
+          }
+        ]
       },
       {
         "id": "604",
@@ -609,7 +793,13 @@
           "Alto": "181",
           "Tenor": "181",
           "Bass": "181"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "181"
+          }
+        ]
       },
       {
         "id": "605",
@@ -620,7 +810,13 @@
           "Alto": "95",
           "Tenor": "95",
           "Bass": "95"
-        }
+        },
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "95"
+          }
+        ]
       },
       {
         "id": "606",
@@ -629,10 +825,15 @@
         "parts": {
           "Sopran": "135",
           "Alto": "133",
-          "Tenor": "132",
-          "Bass": "132"
+          "Tenor": "136",
+          "Bass": "134"
         },
-        "pages": []
+        "pages": [
+          {
+            "label": "Partitură",
+            "id": "132"
+          }
+        ]
       },
       {
         "id": "607",
