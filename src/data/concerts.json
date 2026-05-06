@@ -1,4 +1,122 @@
 {
+  "concert-2025": {
+    "title": "INCTC 2026 Partituri",
+    "description": "Repertoriul pregătit pentru INCTC 2026.",
+    "items": [
+      {
+        "id": "701",
+        "title": "1 Forte come la morte è l'amore",
+        "songId": "201",
+        "parts": { "Sopran": "231", "Alto": "263", "Tenor": "215", "Bass": "247" },
+        "pages": [{ "label": "Partitură", "id": "201" }]
+      },
+      {
+        "id": "702",
+        "title": "2 Christ is my hope",
+        "songId": "202",
+        "parts": { "Sopran": "232", "Alto": "264", "Tenor": "216", "Bass": "248" },
+        "pages": [{ "label": "Partitură", "id": "202" }]
+      },
+      {
+        "id": "703",
+        "title": "3 Cine ne va despărți",
+        "songId": "203",
+        "parts": { "Sopran": "233", "Alto": "265", "Tenor": "217", "Bass": "249" },
+        "pages": [{ "label": "Partitură", "id": "203" }]
+      },
+      {
+        "id": "704",
+        "title": "4 All'agnello Gloria",
+        "songId": "204",
+        "parts": { "Sopran": "234", "Alto": "266", "Tenor": "218", "Bass": "250" },
+        "pages": [{ "label": "Partitură", "id": "204" }]
+      },
+      {
+        "id": "705",
+        "title": "5 Ne aduni pe toți cu iubire",
+        "songId": "205",
+        "parts": { "Sopran": "235", "Alto": "267", "Tenor": "219", "Bass": "251" },
+        "pages": [{ "label": "Partitură", "id": "205" }]
+      },
+      {
+        "id": "706",
+        "title": "6 Cristos e lumina",
+        "songId": "206",
+        "parts": { "Sopran": "236", "Alto": "268", "Tenor": "220", "Bass": "252" },
+        "pages": [{ "label": "Partitură", "id": "206" }]
+      },
+      {
+        "id": "707",
+        "title": "7 Verso l'alto",
+        "songId": "181",
+        "parts": { "Sopran": "237", "Alto": "269", "Tenor": "221", "Bass": "253" },
+        "pages": [{ "label": "Partitură", "id": "181" }]
+      },
+      {
+        "id": "708",
+        "title": "8 Eu te iubesc, Doamne!",
+        "songId": "207",
+        "parts": { "Sopran": "238", "Alto": "270", "Tenor": "222", "Bass": "254" },
+        "pages": [{ "label": "Partitură", "id": "207" }]
+      },
+      {
+        "id": "709",
+        "title": "9 Saldo è il mio cuore",
+        "songId": "208",
+        "parts": { "Sopran": "239", "Alto": "271", "Tenor": "223", "Bass": "255" },
+        "pages": [{ "label": "Partitură", "id": "208" }]
+      },
+      {
+        "id": "710",
+        "title": "10 Pacem in terris",
+        "songId": "117",
+        "parts": { "Sopran": "240", "Alto": "272", "Tenor": "224", "Bass": "256" },
+        "pages": [{ "label": "Partitură", "id": "117" }]
+      },
+      {
+        "id": "711",
+        "title": "11 La vera gioia",
+        "songId": "209",
+        "parts": { "Sopran": "241", "Alto": "273", "Tenor": "225", "Bass": "257" },
+        "pages": [{ "label": "Partitură", "id": "209" }]
+      },
+      {
+        "id": "712",
+        "title": "12 La pace verrà",
+        "songId": "210",
+        "parts": { "Sopran": "242", "Alto": "274", "Tenor": "226", "Bass": "258" },
+        "pages": [{ "label": "Partitură", "id": "210" }]
+      },
+      {
+        "id": "713",
+        "title": "13 Jesus Christ, you are my life",
+        "songId": "211",
+        "parts": { "Sopran": "243", "Alto": "275", "Tenor": "227", "Bass": "259" },
+        "pages": [{ "label": "Partitură", "id": "211" }]
+      },
+      {
+        "id": "714",
+        "title": "14 Il canto del mare",
+        "songId": "212",
+        "parts": { "Sopran": "244", "Alto": "276", "Tenor": "228", "Bass": "260" },
+        "pages": [{ "label": "Partitură", "id": "212" }]
+      },
+      {
+        "id": "715",
+        "title": "15 Cristo sorgente",
+        "songId": "213",
+        "parts": { "Sopran": "245", "Alto": "277", "Tenor": "229", "Bass": "261" },
+        "pages": [{ "label": "Partitură", "id": "213" }]
+      },
+      {
+        "id": "716",
+        "title": "16 Anima Christi",
+        "songId": "214",
+        "parts": { "Sopran": "246", "Alto": "278", "Tenor": "230", "Bass": "262" },
+        "pages": [{ "label": "Partitură", "id": "214" }]
+      }
+    ]
+  },
   "concert": {
     "title": "Program Concert",
     "description": "Programul concertului principal.",
@@ -939,124 +1057,6 @@
         "id": "609",
         "title": "9 Cerul sfant, intreaga lume",
         "songId": null
-      }
-    ]
-  },
-  "concert-2025": {
-    "title": "Concert 2025 – Repertoriu Nou",
-    "description": "Repertoriul nou pregătit pentru concertul 2025.",
-    "items": [
-      {
-        "id": "701",
-        "title": "1 Forte come la morte è l'amore",
-        "songId": "201",
-        "parts": { "Sopran": "231", "Alto": "263", "Tenor": "215", "Bass": "247" },
-        "pages": [{ "label": "Partitură", "id": "201" }]
-      },
-      {
-        "id": "702",
-        "title": "2 Christ is my hope",
-        "songId": "202",
-        "parts": { "Sopran": "232", "Alto": "264", "Tenor": "216", "Bass": "248" },
-        "pages": [{ "label": "Partitură", "id": "202" }]
-      },
-      {
-        "id": "703",
-        "title": "3 Cine ne va despărți",
-        "songId": "203",
-        "parts": { "Sopran": "233", "Alto": "265", "Tenor": "217", "Bass": "249" },
-        "pages": [{ "label": "Partitură", "id": "203" }]
-      },
-      {
-        "id": "704",
-        "title": "4 All'agnello Gloria",
-        "songId": "204",
-        "parts": { "Sopran": "234", "Alto": "266", "Tenor": "218", "Bass": "250" },
-        "pages": [{ "label": "Partitură", "id": "204" }]
-      },
-      {
-        "id": "705",
-        "title": "5 Ne aduni pe toți cu iubire",
-        "songId": "205",
-        "parts": { "Sopran": "235", "Alto": "267", "Tenor": "219", "Bass": "251" },
-        "pages": [{ "label": "Partitură", "id": "205" }]
-      },
-      {
-        "id": "706",
-        "title": "6 Cristos e lumina",
-        "songId": "206",
-        "parts": { "Sopran": "236", "Alto": "268", "Tenor": "220", "Bass": "252" },
-        "pages": [{ "label": "Partitură", "id": "206" }]
-      },
-      {
-        "id": "707",
-        "title": "7 Verso l'alto",
-        "songId": null,
-        "notes": "Doar audio – nu există partitură",
-        "parts": { "Sopran": "237", "Alto": "269", "Tenor": "221", "Bass": "253" }
-      },
-      {
-        "id": "708",
-        "title": "8 Eu te iubesc, Doamne!",
-        "songId": "207",
-        "parts": { "Sopran": "238", "Alto": "270", "Tenor": "222", "Bass": "254" },
-        "pages": [{ "label": "Partitură", "id": "207" }]
-      },
-      {
-        "id": "709",
-        "title": "9 Saldo è il mio cuore",
-        "songId": "208",
-        "parts": { "Sopran": "239", "Alto": "271", "Tenor": "223", "Bass": "255" },
-        "pages": [{ "label": "Partitură", "id": "208" }]
-      },
-      {
-        "id": "710",
-        "title": "10 Pacem in terris",
-        "songId": null,
-        "notes": "Doar audio – nu există partitură",
-        "parts": { "Sopran": "240", "Alto": "272", "Tenor": "224", "Bass": "256" }
-      },
-      {
-        "id": "711",
-        "title": "11 La vera gioia",
-        "songId": "209",
-        "parts": { "Sopran": "241", "Alto": "273", "Tenor": "225", "Bass": "257" },
-        "pages": [{ "label": "Partitură", "id": "209" }]
-      },
-      {
-        "id": "712",
-        "title": "12 La pace verrà",
-        "songId": "210",
-        "parts": { "Sopran": "242", "Alto": "274", "Tenor": "226", "Bass": "258" },
-        "pages": [{ "label": "Partitură", "id": "210" }]
-      },
-      {
-        "id": "713",
-        "title": "13 Jesus Christ, you are my life",
-        "songId": "211",
-        "parts": { "Sopran": "243", "Alto": "275", "Tenor": "227", "Bass": "259" },
-        "pages": [{ "label": "Partitură", "id": "211" }]
-      },
-      {
-        "id": "714",
-        "title": "14 Il canto del mare",
-        "songId": "212",
-        "parts": { "Sopran": "244", "Alto": "276", "Tenor": "228", "Bass": "260" },
-        "pages": [{ "label": "Partitură", "id": "212" }]
-      },
-      {
-        "id": "715",
-        "title": "15 Cristo sorgente",
-        "songId": "213",
-        "parts": { "Sopran": "245", "Alto": "277", "Tenor": "229", "Bass": "261" },
-        "pages": [{ "label": "Partitură", "id": "213" }]
-      },
-      {
-        "id": "716",
-        "title": "16 Anima Christi",
-        "songId": "214",
-        "parts": { "Sopran": "246", "Alto": "278", "Tenor": "230", "Bass": "262" },
-        "pages": [{ "label": "Partitură", "id": "214" }]
       }
     ]
   }

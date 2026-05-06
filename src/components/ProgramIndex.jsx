@@ -37,11 +37,11 @@ const ProgramIndex = ({ onSelectProgram }) => {
 
             {/* Programs Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {Object.entries(concertsData).map(([key, program]) => (
+                {Object.entries(concertsData).map(([key, program], index) => (
                     <button
                         key={key}
                         onClick={() => onSelectProgram(key)}
-                        className="group relative flex flex-col p-8 bg-paper dark:bg-slate-800/50 rounded-2xl shadow-sm border border-border hover:shadow-md hover:border-primary/30 transition-all text-left overflow-hidden"
+                        className={`group relative flex flex-col p-8 bg-paper dark:bg-slate-800/50 rounded-2xl shadow-sm border border-border hover:shadow-md hover:border-primary/30 transition-all text-left overflow-hidden${index === 0 ? ' md:col-span-2 md:max-w-lg md:mx-auto md:w-full' : ''}`}
                     >
                         <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">
                             {program.title}
