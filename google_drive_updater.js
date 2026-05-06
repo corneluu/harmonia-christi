@@ -113,8 +113,13 @@ function checkForUpdates() {
             return;
         }
 
-        Logger.log("🚨 Found " + newItems.length + " NEW items. Copy below:");
-        Logger.log(JSON.stringify(newItems, null, 2));
+        Logger.log("🚨 Found " + newItems.length + " NEW items. Copy each line below into songs.json:");
+        Logger.log("[");
+        for (var j = 0; j < newItems.length; j++) {
+            var comma = j < newItems.length - 1 ? "," : "";
+            Logger.log("  " + JSON.stringify(newItems[j]) + comma);
+        }
+        Logger.log("]");
 
     } catch (e) {
         Logger.log("ERROR: " + e.toString());
